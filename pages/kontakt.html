@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8" />
+        <title>kontakt</title>
+    </head>
+    <body>
+        <nav>
+            <p>
+                <h4>Navigationsmeny</h4>
+                <ul>
+                    <li><a href="/index.html">start</a></li>
+                    <li><a href="/pages/laborationer.html">laborationer</a></li>
+                    <li><a href="/pages/presentation.html">presentation</a></li>
+                    <li><a href="/pages/kontakt.html">kontakt</a></li>
+                </ul>
+        </nav>
+        <div id="contactForm">
+            Observera! Detta är bara ett påhittat kontaktformulär
+            <!-- legacy code reminder  will probably use it for later on -->
+            <!--<form oninput="resultat.value=subject.id+'='+subject.value +' '+headline.id+'='+headline.value +' '+textarea.id+'='+textarea.value +' '+check_mail.id+'='+check_mail.checked+' '+check_phone.id+'='+check_phone.checked" id="contact_form"> -->
+            <form action="http://webproduction.standout.se/form.php" method="post" id="contact_form">
+                <fieldset>
+                    <legend>Fråga</legend>
+                    <p>
+                        <label for="errand">Ärendetyp </label>
+                        <select name="errand" form="contact_form" id="errand">
+                            <option value="1">Fråga</option>
+                            <option value="2">Klagomål</option>
+                            <option value="3">Förfrågan</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="title">Rubrik: </label>
+                        <input type="text" name="title" id="title" value="Vad göra?"/>
+                    </p>
+                    <p>
+                        <label for="question">Fråga: </label>
+                        <textarea name="question" form="contact_form" id="question" >Jag sitter och testar formuläret.</textarea>
+                    </p>
+                </fieldset>
+                <fieldset>
+                        <legend>Information om dig</legend>
+                            <!-- Assumed that you'd be able to be contacted both ways hence no radiobutton--> 
+                            <label for="check_mail">kontakta via mail</label>
+                            <input type="checkbox" name="contact[]" value="mail" id="check_mail"/>
+                            <br>
+                            <label for="check_phone">kontakta via telefon</label>
+                            <input type="checkbox" name="contact[]" value="phone" id="check_phone"/>
+                </fieldset>
+                <input type="submit" value="Send" name="submit_button"/>
+                <!-- Tested the result with <output>. Output probably gets used as a preview and then after doing a post after the user has verified that the information is correct --> 
+                <!--<output name="resultat">Resultat:</output> -->
+            </form>
+        </div>
+    </body>
+</html>

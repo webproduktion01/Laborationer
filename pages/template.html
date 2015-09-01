@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <!-- specifies the base URL to use for all relative URLs contained within a document -->
+        <!-- <base href="http://www.example.com/page.html">/> -->
+        <meta charset="utf-8" />
+        <title>Template title </title>
+    </head>
+    <body>
+        <nav>
+            <p>
+                <h4>Navigationsmeny</h4>
+                <ul>
+                    <li><a href="/index.html">start</a></li>
+                    <li><a href="/pages/laborationer.html">laborationer</a></li>
+                    <li><a href="/pages/presentation.html">presentation</a></li>
+                    <li><a href="/pages/kontakt.html">kontakt</a></li>
+                </ul>
+            <main>
+                <!-- The HTML Section Element (<section>) represents a generic section of a document, i.e., a thematic grouping of content, typically with a heading -->
+                <section id="section-1">
+                    <h1>Example section heading 1</h1>
+                    <section id="subsection">
+                        <h3>Example subsection heading 1</h3>
+                        <p>
+                            example text blah blah blah
+                        </p>
+                    </section>
+                    <!-- If it is of a higher rank than the previous heading, it closes the previous section and opens a new implicit one at the higher level(2 > 3 -->
+                    <section id="section-closing">
+                        <h2>Example closing off section heading 1</h2>
+                        <p>
+                            example text blah blah blah
+                        </p>
+                    </section>
+                </section>
+            </main>
+            
+            
+            <!-- This could be a forum post, a magazine or newspaper article, a blog entry, or any other independent item of content.  -->
+            <article>
+                <h2>Example article heading 1</h2>
+            </article>
+        </nav>
+    </body>
+</html>
