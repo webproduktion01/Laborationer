@@ -153,12 +153,14 @@
                                     <dl>
                                         <dt>Vilken är den relativa sökvägen från filen default.html till filen top.html? </dt>
                                         <dd>pages/top.html</dd> <!-- relativ till nuvarande dokuments katalog-->
+                                        <dd>/html/pages/top.html</dd> <!-- relativ sökväg från root till top.html -->
                                     </dl>
                                 </li>
                                 <li>
                                     <dl>
                                         <dt>Vilken är den relativa sökvägen från filen bottom.html till filen index.html?</dt>
                                         <dd>/index.html</dd> <!-- relativ sökväg från bottoms.html root till index.html som ligger i root -->
+                                        <dd>../../index.html</dd><!-- relativa sökvägen från bottom.html katalog till index.html -->
                                     </dl>
                                 </li>
                                 <li>
@@ -171,15 +173,18 @@
                                     <dl>
                                         <dt>Vilken är den relativa sökvägen från filen top.html till bottom.html? </dt>
                                         <dd>bottom.html</dd> <!-- de ligger i samma mapp så mer än så krävs ej -->
+                                        <dd>/html/pages/bottom.html</dd> <!-- relativ sökväg gentemot root till bottom -->
                                     </dl>
                                 </li>
                                 <li>
                                     <dl>
                                         <dt>Vilken är den relativa sökvägen från filen index.html till top.html?</dt>
-                                        <dd>/html/pages/top.html</dd> <!-- relativ från index till top-->
+                                        <dd>/html/pages/top.html</dd> <!-- relativ från root till top.html -->
+                                        <dd>html/pages/top.html</dd> <!-- relativ länk från index.html katalog till top.html -->
                                     </dl>
                                 </li>
                             </ol>
+                        <!-- Alla relativa länkar kan även ändras med hjälp av <base> i ett dokument-->
                     </li>
                     <li>
                         <a href="#navigation">Länkar och mer listor</a>
@@ -197,7 +202,7 @@
                         <a href="../index.html#entry3">Buck Bunny trailer</a>
                     </li>
                     <li><a href="#resultat">Tabeller</a></li>
-                    <li><a href="../kontakt.html">Formulär</li></a>
+                    <li><a href="kontakt.html">Formulär</li></a>
                 </ol>
             </section>
                 <section id="Laboration-2"><H2>Laboration 2</H2>
