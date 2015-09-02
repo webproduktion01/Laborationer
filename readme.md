@@ -1,0 +1,1 @@
+This project is a exercise called Laboration 1 - Introduce yourself (except its in swedish)
