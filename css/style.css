@@ -1,0 +1,97 @@
+body {
+    margin:0px;
+    background-color: #DAE1E3;
+    overflow-y:hidden; /* hides the y-axis scrollbar*/
+    overflow-y:scroll; /* makes the page still scrollable y-wise*/
+}
+h1{
+    text-align:center;
+}
+
+main {
+    margin:0px auto;
+    max-width: 1000px;
+    width: 1000px;
+    min-width:1000px;
+    background-color: #D1930D; /* orange */
+}
+
+nav {
+    margin:0px auto;
+    float:left;
+    background-color: #F0F0F0;
+    max-width:200px;
+    min-width:200px;
+    width:200px;
+}
+
+section {
+    margin:0px auto;
+    background-color: #DBBDDB;
+    max-width: 400px;
+    width:400px;
+    min-width:400px;
+    float:left;
+}
+
+header {
+    margin: 0 auto;
+    background-color: #80D6ED;
+    max-height: 100px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100px;
+    alignment-adjust: middle;
+}
+
+section section{
+    background-color: #DBBDDF;
+}
+article {
+    margin:0px auto;
+    background-color: #3C6D7D;
+}
+article video{
+    max-width: 300px;
+    min-width: 300px;
+}
+
+aside {
+    margin: 0 auto;
+    float:left;
+    max-width: 400px;
+    width:400px;
+    min-width:400px;
+    max-height:100%;
+    height:100%;
+    background-color: #FFFFFF;
+}
+
+footer {
+    margin:0 auto;
+    float:left;
+    bottom:0px;
+    max-height:2em;
+    height:2em;
+    max-width:100%;
+    min-width:100%;
+    width:100%;
+    text-align:right;
+    background-color: #E3D5A8;
+}
+.blogg-entry{
+    background-color: #3CDDDD;
+}
+.signatur{
+    background-color: #3C6FFF;
+}
+#contactForm{
+    float:left;
+    background-color: #FFFFFF;
+    width:800px;
+    max-width:800px;
+    min-width:800px;
+}
