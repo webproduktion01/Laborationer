@@ -1,37 +1,42 @@
-body {
-    margin:0px;
-    background-color: #DAE1E3;
-    overflow-y:hidden; /* hides the y-axis scrollbar*/
-    overflow-y:scroll; /* makes the page still scrollable y-wise*/
+html {
+    height: 100%;
 }
-h1{
-    text-align:center;
+
+body {
+    margin: 0px;
+    background-color: #DAE1E3;
+    
+    /* hides the y-axis scrollbar*/    
+    /*overflow-y: hidden;*/
+    /* always makes scrollbar visible */
+    /*overflow-y: scroll;*/
+
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    overflow-y:visible;
+
+}
+
+h1 {
+    margin: 0px;
+    text-align: left;
 }
 
 main {
-    margin:0px auto;
+    margin: 0px auto;
+    size: relative;
     max-width: 1000px;
     width: 1000px;
-    min-width:1000px;
-    background-color: #D1930D; /* orange */
-}
-
-nav {
-    margin:0px auto;
-    float:left;
-    background-color: #F0F0F0;
-    max-width:200px;
-    min-width:200px;
-    width:200px;
-}
-
-section {
-    margin:0px auto;
-    background-color: #DBBDDB;
-    max-width: 400px;
-    width:400px;
-    min-width:400px;
-    float:left;
+    min-width: 1000px;
+    /* orange */
+    background-color: #D1930D;
+    position:relative;
+    bottom: 200px;
+    top: 0px;
+    height: 100%;
+    overflow-y:visible;
 }
 
 header {
@@ -47,51 +52,106 @@ header img {
     alignment-adjust: middle;
 }
 
-section section{
-    background-color: #DBBDDF;
+nav {
+    margin: 0px auto;
+    float: left;
+    background-color: #F0F0F0;
+    size:relative;
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
 }
+
+section {
+    margin: 0px auto;
+    background-color: #DBBDDB;
+    max-width: 400px;
+    width: 400px;
+    min-width: 400px;
+    float: left;
+    size:relative;
+}
+
+section section {
+    margin: inherit;
+    background-color: #DBBFFF;
+}
+
+section img {
+    size: relative;
+    max-width: 25%;
+}
+
 article {
-    margin:0px auto;
+    margin: 0px auto;
     background-color: #3C6D7D;
+    position:relative;
 }
-article video{
+
+.large section {
+    width: 800px;
+    max-width: 800px;
+    position:relative;
+    size:relative;
+    height:100%;
+}
+
+article video {
     max-width: 300px;
     min-width: 300px;
 }
 
 aside {
     margin: 0 auto;
-    float:left;
+    float: left;
     max-width: 400px;
-    width:400px;
-    min-width:400px;
-    max-height:100%;
-    height:100%;
+    width: 400px;
+    min-width: 400px;
+    max-height: 100%;
+    height: 100%;
     background-color: #FFFFFF;
 }
 
 footer {
-    margin:0 auto;
-    float:left;
-    bottom:0px;
-    max-height:2em;
-    height:2em;
-    max-width:100%;
-    min-width:100%;
-    width:100%;
-    text-align:right;
+    margin: 0 auto;
+    float: left;
+    bottom: 0px;
+    max-height: 2em;
+    height: 2em;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    text-align: right;
     background-color: #E3D5A8;
+    position: relative;
 }
-.blogg-entry{
+
+.blogg-entry {
     background-color: #3CDDDD;
 }
-.signatur{
+
+.signatur {
     background-color: #3C6FFF;
 }
-#contactForm{
-    float:left;
+
+
+/*
+    Hur kontaktformuläret ska bete sig. Använde div eftersom jag inte hittade
+    en annan lämplig strukturtag för det
+*/
+
+#contactForm {
+    float: left;
     background-color: #FFFFFF;
-    width:800px;
-    max-width:800px;
-    min-width:800px;
+    width: 800px;
+    max-width: 800px;
+    min-width: 800px;
+}
+
+
+/* TODO */
+
+table {
+    border: 1px;
+    border-color: black;
 }
