@@ -140,6 +140,14 @@ nav ul{
     border:1px;
     border-color:#000000;
 }
+nav ul li{
+    /*box-shadow: 0 3px 0 #e32b21;*/
+}
+nav ul li a{
+    margin:-3px;
+    border: 3px solid transparent;
+    
+}
 nav ul li a:link, nav ul li a:visited, nav ul li a:active{
     text-decoration:none;
 }
