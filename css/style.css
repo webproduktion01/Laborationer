@@ -131,11 +131,11 @@ nav nav{
     width:100%;
 }
 
-nav ul,nav dl{
+nav nav ul,nav nav dl{
     background-color:#A90857;
 }
 
-nav ul,nav nav dl{
+nav nav ul,nav nav dl{
     float:left;
     list-style-type:none;
     list-style:none;
@@ -143,20 +143,20 @@ nav ul,nav nav dl{
     width:100%;
     /*border: solid 1px #000;*/
 }
-nav:hover,nav nav:hover{
+nav nav:hover{
     background-color: #680033;
     color:#FFFFFF;
 }
-nav:hover > ul li ,nav nav:hover > dl dd{
+nav nav:hover > ul li ,nav nav:hover > dl dd{
     display:block;
 }
 
-nav ul li,nav nav dl dd{
+nav nav ul li,nav nav dl dd{
     background-color: #A90857;
     /*border: solid 1px #000;*/
 }
 
-nav ul li,nav nav dl dd{
+nav nav ul li,nav nav dl dd{
     display:none;
     list-style:none;
     float:left;
@@ -165,22 +165,22 @@ nav ul li,nav nav dl dd{
     height:100%;
 }
 
-nav ul li:hover,nav nav dl dd:hover{
+nav nav ul li:hover,nav nav dl dd:hover{
     background-color: #D2498C;
 }
 
-nav ul li a,nav nav dl dd a{
+nav nav ul li a,nav nav dl dd a{
     float:left;
     width:100%;
 }
 
-nav ul li a:link,nav ul li a:visited,nav ul li a:active,nav nav dl dd a:link, nav nav dl dd a:visited, nav nav dl dd a:active{
+nav nav ul li a:link,nav nav ul li a:visited,nav nav ul li a:active,nav nav dl dd a:link, nav nav dl dd a:visited, nav nav dl dd a:active{
     text-decoration:none;
     height:inherit;
     width:inherit;
 }
 
-nav ul li:hover > a, nav nav dl dd:hover > a{
+nav nav ul li:hover > a, nav nav dl dd:hover > a{
     color:#FFFFFF;
 }
 
