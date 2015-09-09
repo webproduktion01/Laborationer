@@ -6,7 +6,10 @@
     <title>Laborationer</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Lato|Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -171,89 +174,87 @@
                     <li><a href="../index.html">Startsidan</a></li>
                     <li>
                         Absoluta/Relativa sökvägar
-                        <p>
-                            www.server.se
-                            <ul>
-                                <li>
-                                    www
-                                    <ul>
-                                        <li>
-                                            index.html
-                                        </li>
-                                        <li>
-                                            html
-                                            <ul>
-                                                <li>
-                                                    default.html
-                                                </li>
-                                                <li>
-                                                    pages
-                                                    <ul>
-                                                        <li>
-                                                            top.html
-                                                        </li>
-                                                        <li>
-                                                            bottom.html
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ol>
-                                <li>
-                                    <dl>
-                                        <dt>Vilken är den absoluta sökvägen till filen bottom.html? </dt>
-                                        <dd>http://www.server.se/html/pages/bottom.html</dd>
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Vilken är den relativa sökvägen från filen default.html till filen top.html? </dt>
-                                        <dd>pages/top.html</dd>
-                                        <!-- relativ till nuvarande dokuments katalog-->
-                                        <dd>/html/pages/top.html</dd>
-                                        <!-- relativ sökväg från root till top.html -->
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Vilken är den relativa sökvägen från filen bottom.html till filen index.html?</dt>
-                                        <dd>/index.html</dd>
-                                        <!-- relativ sökväg från bottoms.html root till index.html som ligger i root -->
-                                        <dd>../../index.html</dd>
-                                        <!-- relativa sökvägen från bottom.html katalog till index.html -->
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Vilken är den absoluta sökvägen till filen index.html?</dt>
-                                        <dd>http://www.server.se/index.html</dd>
-                                        <!-- absolut sökväg som gäller överallt -->
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Vilken är den relativa sökvägen från filen top.html till bottom.html? </dt>
-                                        <dd>bottom.html</dd>
-                                        <!-- de ligger i samma mapp så mer än så krävs ej -->
-                                        <dd>/html/pages/bottom.html</dd>
-                                        <!-- relativ sökväg gentemot root till bottom -->
-                                    </dl>
-                                </li>
-                                <li>
-                                    <dl>
-                                        <dt>Vilken är den relativa sökvägen från filen index.html till top.html?</dt>
-                                        <dd>/html/pages/top.html</dd>
-                                        <!-- relativ från root till top.html -->
-                                        <dd>html/pages/top.html</dd>
-                                        <!-- relativ länk från index.html katalog till top.html -->
-                                    </dl>
-                                </li>
-                            </ol>
-                            <!-- Alla relativa länkar kan även ändras med hjälp av <base> i ett dokument-->
+                        <ul>
+                            <li>
+                                www.server.se
+                                <ul>
+                                    <li>
+                                        index.html
+                                    </li>
+                                    <li>
+                                        html
+                                        <ul>
+                                            <li>
+                                                default.html
+                                            </li>
+                                            <li>
+                                                pages
+                                                <ul>
+                                                    <li>
+                                                        top.html
+                                                    </li>
+                                                    <li>
+                                                        bottom.html
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ol>
+                            <li>
+                                <dl>
+                                    <dt>Vilken är den absoluta sökvägen till filen bottom.html? </dt>
+                                    <dd>http://www.server.se/html/pages/bottom.html</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Vilken är den relativa sökvägen från filen default.html till filen top.html? </dt>
+                                    <dd>pages/top.html</dd>
+                                    <!-- relativ till nuvarande dokuments katalog-->
+                                    <dd>/html/pages/top.html</dd>
+                                    <!-- relativ sökväg från root till top.html -->
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Vilken är den relativa sökvägen från filen bottom.html till filen index.html?</dt>
+                                    <dd>/index.html</dd>
+                                    <!-- relativ sökväg från bottoms.html root till index.html som ligger i root -->
+                                    <dd>../../index.html</dd>
+                                    <!-- relativa sökvägen från bottom.html katalog till index.html -->
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Vilken är den absoluta sökvägen till filen index.html?</dt>
+                                    <dd>http://www.server.se/index.html</dd>
+                                    <!-- absolut sökväg som gäller överallt -->
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Vilken är den relativa sökvägen från filen top.html till bottom.html? </dt>
+                                    <dd>bottom.html</dd>
+                                    <!-- de ligger i samma mapp så mer än så krävs ej -->
+                                    <dd>/html/pages/bottom.html</dd>
+                                    <!-- relativ sökväg gentemot root till bottom -->
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Vilken är den relativa sökvägen från filen index.html till top.html?</dt>
+                                    <dd>/html/pages/top.html</dd>
+                                    <!-- relativ från root till top.html -->
+                                    <dd>html/pages/top.html</dd>
+                                    <!-- relativ länk från index.html katalog till top.html -->
+                                </dl>
+                            </li>
+                        </ol>
+                        <!-- Alla relativa länkar kan även ändras med hjälp av <base> i ett dokument-->
                     </li>
                     <li>
                         <a href="#navigation">Länkar och mer listor</a>
