@@ -102,12 +102,12 @@ header img {
 }
 
 /*
+    Font families chosen.
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Lato', sans-serif;
     font-family: 'Oswald', sans-serif;
 */
-
 /*
     Heading layout and font settings
 */
@@ -296,6 +296,17 @@ article video {
     max-width: 30%;
     min-width: 30%;
 }
+.left{
+    float:left;
+    top:0;
+    right:0;    
+}
+.right{
+    float:right;
+    top:0;
+    right:0;
+}
+
 aside {
     margin: 0 auto;
     float: left;
