@@ -25,33 +25,16 @@
 .color-secondary-2-3 { color: #8A0044 }
 .color-secondary-2-4 { color: #680033 }
 
-/* 
-    Color styling
-*/
+/* Layout container colors */
 body{
     background-color: #7E0C00;
 }
 main{
     background-color: #F03C29;    
 }
-
-h1{
-    color: #680033;
-}
-/*
- Url colors
-*/
-:visited{
-    color: #7E0C00
-}
-:link{
-    color: #CC1C09;
-}
-
 header{
     background-color: #F08A29;    
 }
-
 nav{
     background-color: #FE6858;
 }
@@ -70,7 +53,6 @@ footer{
 section section{
     background-color: #F03C29;
 }
-
 .blogg-entry {
     background-color: #F08A29;
 }
@@ -80,13 +62,15 @@ section section{
 #contactForm{
     background-color: #CC1C09;
 }
-.large article{
-    
+/* General Url colors */
+:visited{
+    color: #7E0C00
+}
+:link{
+    color: #CC1C09;
 }
 
-/*
-    Positioning and other
-*/
+/* Container positioning and other settings */
 body {
     margin: 0 auto;
     margin-bottom:50px;
@@ -94,7 +78,6 @@ body {
     /* So all pages are exactly the same(scrollbar not visible in kontakt.html due to too little content   */
     overflow-y:scroll;
 }
-
 main {
     margin: 0px auto;
     max-width: 1200px;
@@ -105,20 +88,105 @@ main {
     top: 0px;
     overflow:hidden;
 }
-
 header {
     margin: 0 auto;
     max-height: 6em;
 }
-
 header img {
     display: block;
     margin: 0 auto;
     max-height: 6em;
 }
 
-/* Navigation*/
+/*
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
+*/
 
+/*
+    Heading layout and font settings
+*/
+h1{
+    color: #680033;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold; 
+}
+h3{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.17em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align:center;
+}
+h4{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align:center;
+}
+h5{
+    font-family: 'Lato', sans-serif;
+    font-size: .83em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h6{
+    font-family: 'Oswald', sans-serif;
+    font-size: .75em;
+    margin-top: 1em;
+    margin-bottom:1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+p{
+   font-family: 'Open Sans', sans-serif; 
+}
+
+/* List layout and font settings */
+ol {
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+}
+ul {
+    list-style-type:square;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+} 
+
+/* Navigation*/
 /* Nav is in pixels since inherited nav's use parents nav no matter what you set them as apparently*/
 nav {
     float: left;
@@ -130,32 +198,18 @@ nav nav{
     clear:left;
     width:100%;
 }
-
-nav nav ul,nav nav dl{
-    background-color:#A90857;
-}
-
 nav nav ul,nav nav dl{
     float:left;
     list-style-type:none;
     list-style:none;
     text-decoration:none;
     width:100%;
+    padding-left: 0;
     /*border: solid 1px #000;*/
-}
-nav nav:hover{
-    background-color: #680033;
-    color:#FFFFFF;
 }
 nav nav:hover > ul li ,nav nav:hover > dl dd{
     display:block;
 }
-
-nav nav ul li,nav nav dl dd{
-    background-color: #A90857;
-    /*border: solid 1px #000;*/
-}
-
 nav nav ul li,nav nav dl dd{
     display:none;
     list-style:none;
@@ -164,29 +218,35 @@ nav nav ul li,nav nav dl dd{
     width:100%;
     height:100%;
 }
-
-nav nav ul li:hover,nav nav dl dd:hover{
-    background-color: #D2498C;
-}
-
 nav nav ul li a,nav nav dl dd a{
     float:left;
     width:100%;
 }
-
 nav nav ul li a:link,nav nav ul li a:visited,nav nav ul li a:active,nav nav dl dd a:link, nav nav dl dd a:visited, nav nav dl dd a:active{
     text-decoration:none;
     height:inherit;
     width:inherit;
 }
 
+/* Navigation colors */
+nav nav:hover{
+    background-color: #680033;
+    color:#FFFFFF;
+}
+nav nav ul li,nav nav dl dd{
+    background-color: #A90857;
+}
+nav nav ul li:hover,nav nav dl dd:hover{
+    background-color: #D2498C;
+}
+nav nav ul,nav nav dl{
+    background-color:#A90857;
+}
 nav nav ul li:hover > a, nav nav dl dd:hover > a{
     color:#FFFFFF;
 }
 
-
-/* Content containers */
-
+/* Content containers settings and behaviour*/
 section {
     margin: 0px auto;
     max-width: 40%;
@@ -194,39 +254,34 @@ section {
     min-width: 40%;
     float: left;
 }
-
-section section {
-    margin: inherit;
-}
-
 section img {
     max-width: 25%;
 }
+section section {
+    max-width:100%;
+    width:100%;
+}
+section.large{
+    position: relative;
+    width: 80%;
+    max-width: 80%;
 
+}
 article {
     margin: 0px auto;
     position: relative;
 }
-
-.large section {
-    position: relative;
-    width: 80%;
-    max-width: 80%;
-    overflow:auto;
-}
-.large article{
+article.large{
     position: relative;
     width: 80%;
     max-width: 80%;
     overflow:auto;
     height:1000px;
 }
-
 article video {
     max-width: 30%;
     min-width: 30%;
 }
-
 aside {
     margin: 0 auto;
     float: left;
@@ -235,7 +290,6 @@ aside {
     min-width: 40%;
     max-height: 100%;
 }
-
 footer {
     margin: 0 auto;
     float: left;
@@ -252,7 +306,6 @@ footer {
     Hur kontaktformuläret ska bete sig. Använde div eftersom jag inte hittade
     en annan lämplig strukturtag för det
 */
-
 #contactForm {
     float: left;
     width: 80%;
@@ -260,17 +313,21 @@ footer {
     min-width: 80%;
 }
 
-
 /* TODO */
-
+/* Table settings, behaviour and coloring*/
 table {
-    border: 1px;
-    border-color: black;
+    border: 1px solid green;
+    border-spacing:1px;
+    border-color: orange;
+    border-collapse:separate;
+    width:100%;
+}
+table thead tr{
+    border: 1px solid white;
+}
+table tbody tr td{
+    border: 1px solid black;
 }
 .active{
     color:gray;
-}
-a:active{
-    color:green;
-}
 }
