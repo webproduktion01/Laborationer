@@ -1,0 +1,369 @@
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=5040u0ku-pzkUvRqxu3ypkVGQfL */
+
+/* Feel free to copy&paste color codes to your application */
+
+
+/* As hex codes */
+
+.color-primary-0 { color: #CC1C09 }	/* Main Primary color */
+.color-primary-1 { color: #FE6858 }
+.color-primary-2 { color: #F03C29 }
+.color-primary-3 { color: #A71000 }
+.color-primary-4 { color: #7E0C00 }
+
+.color-secondary-1-0 { color: #CC6809 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #FEA958 }
+.color-secondary-1-2 { color: #F08A29 }
+.color-secondary-1-3 { color: #A75100 }
+.color-secondary-1-4 { color: #7E3D00 }
+
+.color-secondary-2-0 { color: #A90857 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #D2498C }
+.color-secondary-2-2 { color: #C62273 }
+.color-secondary-2-3 { color: #8A0044 }
+.color-secondary-2-4 { color: #680033 }
+
+/* Layout container colors */
+body{
+    background-color: #7E0C00;
+}
+main{
+    background-color: #F03C29;   
+}
+header{
+    background-color: #F08A29;    
+}
+nav{
+    background-color: #FE6858;
+}
+section{
+    background-color: #F03C29;
+}
+article{
+    background-color: #F03C29;
+}
+aside{
+    background-color: #CC1C09;
+}
+footer{
+    background-color: #A71000;
+}
+section section{
+    background-color: #F03C29;
+}
+.blogg-entry {
+    background-color: #F08A29;
+}
+.signatur {
+    background-color: #FEA958;
+}
+#contactForm{
+    background-color: #CC1C09;
+}
+/* General Url colors */
+:visited{
+    color: #7E0C00
+}
+:link{
+    color: #CC1C09;
+}
+
+nav,section,article,aside,section section,.blogg-entry,.signatur,#contactForm{
+    border-radius:15px;
+}
+
+/* Container positioning and other settings */
+body {
+    margin: 0 auto;
+    margin-bottom:50px;
+    top: 0px;
+    /* So all pages are exactly the same(scrollbar not visible in kontakt.html due to too little content   */
+    overflow-y:scroll;
+}
+main {
+    margin: 0px auto;
+    max-width: 1200px;
+    width: 1000px;
+    min-width: 960px;
+    position: relative;
+    bottom: 50px;
+    top: 0px;
+    overflow:hidden;
+}
+header {
+    margin: 0 auto;
+    max-height: 6em;
+    background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBTVkctZWRpdCAtIGh0dHA6Ly9zdmctZWRpdC5nb29nbGVjb2RlLmNvbS8gLS0+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzA3LjM1NTM0NjY3OTY4NzUsMjQ1LjIwMDAxMjIwNzAzMTI1IDI0OC42NTI2NDg5MjU3ODEyNSwzMjUuOTk3Mzc1NDg4MjgxMjUgMTUzLjY2OTY0NzIxNjc5Njg4LDI5NS4xMzU1Mjg1NjQ0NTMxIDE1My42Njk2NDcyMTY3OTY4OCwxOTUuMjY0NDk1ODQ5NjA5MzggMjQ4LjY1MjY0ODkyNTc4MTI1LDE2NC40MDI2NDg5MjU3ODEyNSAzMDcuMzU1MzQ2Njc5Njg3NSwyNDUuMjAwMDEyMjA3MDMxMjUgIiBzdHJva2VXaWR0aD0iNSIgc3Ryb2tlY29sb3I9IiMwMDAwMDAiIGZpbGw9IiNGRjAwMDAiIGVkZ2U9Ijk5Ljg3MTAyOCIgb3JpZW50PSJ4IiBzaWRlcz0iNSIgc2hhcGU9InJlZ3VsYXJQb2x5IiBpZD0ic3ZnXzEiIGN5PSIxOTUuMjAwMDEyIiBjeD0iOTkuMzk5OTk0Ii8+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCA0MzcuNTIzMTAxODA2NjQwNiwyMDAuOTY3NzEyNDAyMzQzNzUgMzc5Ljg0OTI0MzE2NDA2MjUsMjQ0LjY5MjkzMjEyODkwNjI1IDQwMC44MDczNDI1MjkyOTY5LDMxMy45NjcyMjQxMjEwOTM3NSAzNDEuMzk5OTkzODk2NDg0NCwyNzIuNjI3OTI5Njg3NSAyODEuOTkyNjE0NzQ2MDkzNzUsMzEzLjk2NzIyNDEyMTA5Mzc1IDMwMi45NTA3NDQ2Mjg5MDYyNSwyNDQuNjkyOTMyMTI4OTA2MjUgMjQ1LjI3Njg1NTQ2ODc1LDIwMC45Njc3MTI0MDIzNDM3NSAzMTcuNjM3MDU0NDQzMzU5NCwxOTkuNDkzMTMzNTQ0OTIxODggMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCAiIHN0cm9rZVdpZHRoPSI1IiBzdHJva2Vjb2xvcj0iIzAwMDAwMCIgZmlsbD0iIzAwMDBmZiIgb3JpZW50PSJwb2ludCIgcjI9IjQwLjQyNzkzMyIgcj0iMTAxLjA2OTgzMyIgcG9pbnQ9IjEiIHNoYXBlPSJzdGFyIiBpZD0ic3ZnXzIiIGN5PSIxNzkuMjAwMDEyIiBjeD0iMjg1LjM5OTk5NCIvPgogIDxlbGxpcHNlIHJ5PSI0NiIgcng9IjIzNyIgaWQ9InN2Z18zIiBjeT0iMzIyLjIwMDAxMiIgY3g9IjMxNS4zOTk5OTQiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiAgPGVsbGlwc2Ugcnk9IjE5IiByeD0iMTAyIiBpZD0ic3ZnXzQiIGN5PSIzMjYuMjAwMDEyIiBjeD0iMzg4LjM5OTk5NCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMGJmYmYiLz4KICA8cGF0aCBpZD0ic3ZnXzYiIGQ9Im0yNzEuODI0MDk3LDI5OC4xMDQ3OTdxMTkuNTExNzE5LDEzLjQwMTEyMyAzOC45Nzk2MTQsMG0tMzQuNzUyMTA2LC0yNi40NjYxODdjMCwtMi4wNzA5MjMgMS42ODA5MDgsLTMuNzUwNzMyIDMuNzUwNzAyLC0zLjc1MDczMmMyLjA3MjA4MywwIDMuNzUwNzkzLDEuNjc5ODEgMy43NTA3OTMsMy43NTA3MzJjMCwyLjA3MDkyMyAtMS42Nzg3MTEsMy43NDk2OTUgLTMuNzUwNzkzLDMuNzQ5Njk1Yy0yLjA2OTc5NCwwIC0zLjc1MDcwMiwtMS42Nzg3NzIgLTMuNzUwNzAyLC0zLjc0OTY5NW0yMy4wNjY5ODYsMGMwLC0yLjA3MDkyMyAxLjY4MDkwOCwtMy43NTA3MzIgMy43NTA0ODgsLTMuNzUwNzMyYzIuMDcyMzI3LDAgMy43NTA5NzcsMS42Nzk4MSAzLjc1MDk3NywzLjc1MDczMmMwLDIuMDcwOTIzIC0xLjY3ODY1LDMuNzQ5Njk1IC0zLjc1MDk3NywzLjc0OTY5NWMtMi4wNjk1OCwwIC0zLjc1MDQ4OCwtMS42Nzg3NzIgLTMuNzUwNDg4LC0zLjc0OTY5NW0tNDMuNzgwNzAxLDEwLjc2NjY2M2wwLDBjMCwtMTkuODgyMDE5IDE2LjExNzAwNCwtMzYuMDAwMTIyIDM1Ljk5NzkyNSwtMzYuMDAwMTIyYzE5Ljg4MzQyMywwIDM2LjAwMDEyMiwxNi4xMTgxMDMgMzYuMDAwMTIyLDM2LjAwMDEyMmMwLDE5Ljg4MjAxOSAtMTYuMTE2Njk5LDM2LjAwMDEyMiAtMzYuMDAwMTIyLDM2LjAwMDEyMmMtMTkuODgwOTIsMCAtMzUuOTk3OTI1LC0xNi4xMTgxMDMgLTM1Ljk5NzkyNSwtMzYuMDAwMTIyem0wLDBsMCwwYzAsLTE5Ljg4MjAxOSAxNi4xMTcwMDQsLTM2LjAwMDEyMiAzNS45OTc5MjUsLTM2LjAwMDEyMmMxOS44ODM0MjMsMCAzNi4wMDAxMjIsMTYuMTE4MTAzIDM2LjAwMDEyMiwzNi4wMDAxMjJjMCwxOS44ODIwMTkgLTE2LjExNjY5OSwzNi4wMDAxMjIgLTM2LjAwMDEyMiwzNi4wMDAxMjJjLTE5Ljg4MDkyLDAgLTM1Ljk5NzkyNSwtMTYuMTE4MTAzIC0zNS45OTc5MjUsLTM2LjAwMDEyMnoiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiA8L2c+Cjwvc3ZnPg==);
+    background-repeat:repeat;
+    background-size:50px;
+}
+header img {
+    display: block;
+    margin: 0 auto;
+    max-height: 6em;
+}
+
+/*
+    Font families chosen.
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Oswald', sans-serif;
+*/
+/*
+    Heading layout and font settings
+*/
+h1{
+    /* color exception here, only headline with its own color*/
+    color: #680033;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h2{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold; 
+}
+h3{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.17em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align:center;
+}
+h4{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align:center;
+}
+h5{
+    font-family: 'Lato', sans-serif;
+    font-size: .83em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h6{
+    font-family: 'Oswald', sans-serif;
+    font-size: .75em;
+    margin-top: 1em;
+    margin-bottom:1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+p{
+   font-family: 'Open Sans', sans-serif; 
+}
+
+/* General list layout and font settings */
+ol {
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+}
+ul {
+    list-style-type:none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+    background-image:url(../pics/handmaidenmadeironmaiden.png);
+    background-repeat:no-repeat;
+    background-size:20px;
+    background-position: 0% 0%;
+} 
+ul li{
+    padding-left: 20px;
+    background-image:url(../pics/handmaidenmadeironmaiden.png);
+    background-repeat:no-repeat;
+    background-size:20px;
+    background-position: 0% 0%;
+}
+
+/* Detailed navigation menu behaviour and layou*/
+/* Nav is in pixels since inherited nav's use parents nav no matter what you set them as apparently*/
+nav {
+    float: left;
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+}
+nav nav{
+    clear:left;
+    width:100%;
+}
+nav nav ul,nav nav dl{
+    float:left;
+    list-style-type:none;
+    list-style:none;
+    text-decoration:none;
+    width:100%;
+    padding-left: 0;
+    /*border: solid 1px #000;*/
+}
+nav nav:hover > ul li ,nav nav:hover > dl dd{
+    display:block;
+}
+nav nav ul li,nav nav dl dd{
+    display:none;
+    list-style:none;
+    float:left;
+    text-align: left;
+    width:100%;
+    height:100%;
+    background-image:none;
+    padding:0;
+}
+nav nav ul li a,nav nav dl dd a{
+    float:left;
+    width:100%;
+}
+nav nav ul li a:link,nav nav ul li a:visited,nav nav ul li a:active,nav nav dl dd a:link, nav nav dl dd a:visited, nav nav dl dd a:active{
+    text-decoration:none;
+    height:inherit;
+    width:inherit;
+}
+
+/* Navigation colors */
+nav nav:hover{
+    background-color: #680033;
+    color:#FFFFFF;
+}
+nav nav ul li,nav nav dl dd{
+    background-color: #A90857;
+}
+nav nav ul li:hover,nav nav dl dd:hover{
+    background-color: #D2498C;
+}
+nav nav ul,nav nav dl{
+    background-color:#A90857;
+}
+nav nav ul li:hover > a, nav nav dl dd:hover > a{
+    color:#FFFFFF;
+}
+/* active menuitem coloring*/
+.active{
+    color:gray;
+}
+
+/* Content containers settings,layout and behaviour*/
+section {
+    margin: 0px auto;
+    max-width: 40%;
+    width: 40%;
+    min-width: 40%;
+    float: left;
+}
+section img {
+    max-width: 25%;
+}
+section section {
+    max-width:100%;
+    width:100%;
+}
+section.large{
+    position: relative;
+    width: 80%;
+    max-width: 80%;
+
+}
+article {
+    margin: 0px auto;
+    position: relative;
+}
+article.large{
+    position: relative;
+    width: 80%;
+    max-width: 80%;
+    overflow:auto;
+    height:1000px;
+}
+article video {
+    max-width: 30%;
+    min-width: 30%;
+}
+.left{
+    float:left;
+    top:0;
+    right:0;    
+}
+.right{
+    float:right;
+    top:0;
+    right:0;
+}
+
+aside {
+    margin: 0 auto;
+    float: left;
+    max-width: 40%;
+    width: 40%;
+    min-width: 40%;
+    max-height: 100%;
+}
+footer {
+    margin: 0 auto;
+    float: left;
+    max-height: 2em;
+    height: 2em;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    text-align: right;
+    position: relative;
+}
+
+/*
+    Contact form behaviour, layout and settings
+*/
+#contactForm {
+    float: left;
+    width: 80%;
+    max-width: 80%;
+    min-width: 80%;
+}
+#button{
+    margin-left:20px;
+}
+
+/* TODO */
+/* Table settings, behaviour and coloring*/
+table {
+    border: 1px solid green;
+    border-spacing:1px;
+    border-color: orange;
+    border-collapse:separate;
+    width:100%;
+}
+table thead tr{
+    border: 1px solid white;
+}
+table tbody tr td{
+    border: 1px solid black;
+}
+

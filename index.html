@@ -1,69 +1,112 @@
 <!DOCTYPE html>
 <html lang="sv">
-    <head>
-        <meta charset="utf-8" />
-        <title> Anders faktastiska blogg</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8" />
+    <title> Anders faktastiska blogg</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="pics/handmaidenmadeironmaiden.png" alt="bild på ett snurrhjul gjord på 4 roterade A" />
+        </header>
+        <h1>Anders Blogg</h1>
         <nav>
-            <p>
+            <nav>
                 <h4>Navigationsmeny</h4>
                 <ul>
-                    <li><a href="index.html">start</a></li>
+                    <li><a href="index.html" class="active">start</a></li>
                     <li><a href="pages/laborationer.html">laborationer</a></li>
                     <li><a href="pages/presentation.html">presentation</a></li>
                     <li><a href="pages/kontakt.html">kontakt</a></li>
                 </ul>
+            </nav>
         </nav>
-        <!-- Header should be above menu i suppose but i want the menu to be in the exact same spot on all pages-->
-        <header id="header">
-            <img src="pics/handmaidenmadeironmaiden.png" alt="bild på ett snurrhjul gjord på roterade A"/>
-        </header>
         <section id="blogg">
-            <h1>Anders Blogg</h1>
-            <h2>kursblogg</h2>
-
+            <h2>Kursblogg</h2>
             <article id="entry1" class="blogg-entry">
                 <h3>Tjo.</h3>
                 <p>
                     Håller på att skriver laborationsuppgift 1.3 just nu. Kommer när som helst att göra en commit till associerat githhub-konto
                 </p>
-                <footer class="signatur">Skrivet av Anders Bökelund <time>2015-08-27</time></footer>
+                <div class="signatur">Skrivet av Anders Bökelund
+                    <time>2015-08-27</time>
+                </div>
             </article>
             <article id="entry2" class="blogg-entry">
                 <h3>Ugh</h3>
                 <p>
-                    Gjorde en simpel <a href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBTVkctZWRpdCAtIGh0dHA6Ly9zdmctZWRpdC5nb29nbGVjb2RlLmNvbS8gLS0+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzA3LjM1NTM0NjY3OTY4NzUsMjQ1LjIwMDAxMjIwNzAzMTI1IDI0OC42NTI2NDg5MjU3ODEyNSwzMjUuOTk3Mzc1NDg4MjgxMjUgMTUzLjY2OTY0NzIxNjc5Njg4LDI5NS4xMzU1Mjg1NjQ0NTMxIDE1My42Njk2NDcyMTY3OTY4OCwxOTUuMjY0NDk1ODQ5NjA5MzggMjQ4LjY1MjY0ODkyNTc4MTI1LDE2NC40MDI2NDg5MjU3ODEyNSAzMDcuMzU1MzQ2Njc5Njg3NSwyNDUuMjAwMDEyMjA3MDMxMjUgIiBzdHJva2VXaWR0aD0iNSIgc3Ryb2tlY29sb3I9IiMwMDAwMDAiIGZpbGw9IiNGRjAwMDAiIGVkZ2U9Ijk5Ljg3MTAyOCIgb3JpZW50PSJ4IiBzaWRlcz0iNSIgc2hhcGU9InJlZ3VsYXJQb2x5IiBpZD0ic3ZnXzEiIGN5PSIxOTUuMjAwMDEyIiBjeD0iOTkuMzk5OTk0Ii8+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCA0MzcuNTIzMTAxODA2NjQwNiwyMDAuOTY3NzEyNDAyMzQzNzUgMzc5Ljg0OTI0MzE2NDA2MjUsMjQ0LjY5MjkzMjEyODkwNjI1IDQwMC44MDczNDI1MjkyOTY5LDMxMy45NjcyMjQxMjEwOTM3NSAzNDEuMzk5OTkzODk2NDg0NCwyNzIuNjI3OTI5Njg3NSAyODEuOTkyNjE0NzQ2MDkzNzUsMzEzLjk2NzIyNDEyMTA5Mzc1IDMwMi45NTA3NDQ2Mjg5MDYyNSwyNDQuNjkyOTMyMTI4OTA2MjUgMjQ1LjI3Njg1NTQ2ODc1LDIwMC45Njc3MTI0MDIzNDM3NSAzMTcuNjM3MDU0NDQzMzU5NCwxOTkuNDkzMTMzNTQ0OTIxODggMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCAiIHN0cm9rZVdpZHRoPSI1IiBzdHJva2Vjb2xvcj0iIzAwMDAwMCIgZmlsbD0iIzAwMDBmZiIgb3JpZW50PSJwb2ludCIgcjI9IjQwLjQyNzkzMyIgcj0iMTAxLjA2OTgzMyIgcG9pbnQ9IjEiIHNoYXBlPSJzdGFyIiBpZD0ic3ZnXzIiIGN5PSIxNzkuMjAwMDEyIiBjeD0iMjg1LjM5OTk5NCIvPgogIDxlbGxpcHNlIHJ5PSI0NiIgcng9IjIzNyIgaWQ9InN2Z18zIiBjeT0iMzIyLjIwMDAxMiIgY3g9IjMxNS4zOTk5OTQiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiAgPGVsbGlwc2Ugcnk9IjE5IiByeD0iMTAyIiBpZD0ic3ZnXzQiIGN5PSIzMjYuMjAwMDEyIiBjeD0iMzg4LjM5OTk5NCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMGJmYmYiLz4KICA8cGF0aCBpZD0ic3ZnXzYiIGQ9Im0yNzEuODI0MDk3LDI5OC4xMDQ3OTdxMTkuNTExNzE5LDEzLjQwMTEyMyAzOC45Nzk2MTQsMG0tMzQuNzUyMTA2LC0yNi40NjYxODdjMCwtMi4wNzA5MjMgMS42ODA5MDgsLTMuNzUwNzMyIDMuNzUwNzAyLC0zLjc1MDczMmMyLjA3MjA4MywwIDMuNzUwNzkzLDEuNjc5ODEgMy43NTA3OTMsMy43NTA3MzJjMCwyLjA3MDkyMyAtMS42Nzg3MTEsMy43NDk2OTUgLTMuNzUwNzkzLDMuNzQ5Njk1Yy0yLjA2OTc5NCwwIC0zLjc1MDcwMiwtMS42Nzg3NzIgLTMuNzUwNzAyLC0zLjc0OTY5NW0yMy4wNjY5ODYsMGMwLC0yLjA3MDkyMyAxLjY4MDkwOCwtMy43NTA3MzIgMy43NTA0ODgsLTMuNzUwNzMyYzIuMDcyMzI3LDAgMy43NTA5NzcsMS42Nzk4MSAzLjc1MDk3NywzLjc1MDczMmMwLDIuMDcwOTIzIC0xLjY3ODY1LDMuNzQ5Njk1IC0zLjc1MDk3NywzLjc0OTY5NWMtMi4wNjk1OCwwIC0zLjc1MDQ4OCwtMS42Nzg3NzIgLTMuNzUwNDg4LC0zLjc0OTY5NW0tNDMuNzgwNzAxLDEwLjc2NjY2M2wwLDBjMCwtMTkuODgyMDE5IDE2LjExNzAwNCwtMzYuMDAwMTIyIDM1Ljk5NzkyNSwtMzYuMDAwMTIyYzE5Ljg4MzQyMywwIDM2LjAwMDEyMiwxNi4xMTgxMDMgMzYuMDAwMTIyLDM2LjAwMDEyMmMwLDE5Ljg4MjAxOSAtMTYuMTE2Njk5LDM2LjAwMDEyMiAtMzYuMDAwMTIyLDM2LjAwMDEyMmMtMTkuODgwOTIsMCAtMzUuOTk3OTI1LC0xNi4xMTgxMDMgLTM1Ljk5NzkyNSwtMzYuMDAwMTIyem0wLDBsMCwwYzAsLTE5Ljg4MjAxOSAxNi4xMTcwMDQsLTM2LjAwMDEyMiAzNS45OTc5MjUsLTM2LjAwMDEyMmMxOS44ODM0MjMsMCAzNi4wMDAxMjIsMTYuMTE4MTAzIDM2LjAwMDEyMiwzNi4wMDAxMjJjMCwxOS44ODIwMTkgLTE2LjExNjY5OSwzNi4wMDAxMjIgLTM2LjAwMDEyMiwzNi4wMDAxMjJjLTE5Ljg4MDkyLDAgLTM1Ljk5NzkyNSwtMTYuMTE4MTAzIC0zNS45OTc5MjUsLTM2LjAwMDEyMnoiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiA8L2c+Cjwvc3ZnPg==">svg bild</a> med svg-edit
+                    Gjorde en simpel <a href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBTVkctZWRpdCAtIGh0dHA6Ly9zdmctZWRpdC5nb29nbGVjb2RlLmNvbS8gLS0+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzA3LjM1NTM0NjY3OTY4NzUsMjQ1LjIwMDAxMjIwNzAzMTI1IDI0OC42NTI2NDg5MjU3ODEyNSwzMjUuOTk3Mzc1NDg4MjgxMjUgMTUzLjY2OTY0NzIxNjc5Njg4LDI5NS4xMzU1Mjg1NjQ0NTMxIDE1My42Njk2NDcyMTY3OTY4OCwxOTUuMjY0NDk1ODQ5NjA5MzggMjQ4LjY1MjY0ODkyNTc4MTI1LDE2NC40MDI2NDg5MjU3ODEyNSAzMDcuMzU1MzQ2Njc5Njg3NSwyNDUuMjAwMDEyMjA3MDMxMjUgIiBzdHJva2VXaWR0aD0iNSIgc3Ryb2tlY29sb3I9IiMwMDAwMDAiIGZpbGw9IiNGRjAwMDAiIGVkZ2U9Ijk5Ljg3MTAyOCIgb3JpZW50PSJ4IiBzaWRlcz0iNSIgc2hhcGU9InJlZ3VsYXJQb2x5IiBpZD0ic3ZnXzEiIGN5PSIxOTUuMjAwMDEyIiBjeD0iOTkuMzk5OTk0Ii8+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCA0MzcuNTIzMTAxODA2NjQwNiwyMDAuOTY3NzEyNDAyMzQzNzUgMzc5Ljg0OTI0MzE2NDA2MjUsMjQ0LjY5MjkzMjEyODkwNjI1IDQwMC44MDczNDI1MjkyOTY5LDMxMy45NjcyMjQxMjEwOTM3NSAzNDEuMzk5OTkzODk2NDg0NCwyNzIuNjI3OTI5Njg3NSAyODEuOTkyNjE0NzQ2MDkzNzUsMzEzLjk2NzIyNDEyMTA5Mzc1IDMwMi45NTA3NDQ2Mjg5MDYyNSwyNDQuNjkyOTMyMTI4OTA2MjUgMjQ1LjI3Njg1NTQ2ODc1LDIwMC45Njc3MTI0MDIzNDM3NSAzMTcuNjM3MDU0NDQzMzU5NCwxOTkuNDkzMTMzNTQ0OTIxODggMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCAiIHN0cm9rZVdpZHRoPSI1IiBzdHJva2Vjb2xvcj0iIzAwMDAwMCIgZmlsbD0iIzAwMDBmZiIgb3JpZW50PSJwb2ludCIgcjI9IjQwLjQyNzkzMyIgcj0iMTAxLjA2OTgzMyIgcG9pbnQ9IjEiIHNoYXBlPSJzdGFyIiBpZD0ic3ZnXzIiIGN5PSIxNzkuMjAwMDEyIiBjeD0iMjg1LjM5OTk5NCIvPgogIDxlbGxpcHNlIHJ5PSI0NiIgcng9IjIzNyIgaWQ9InN2Z18zIiBjeT0iMzIyLjIwMDAxMiIgY3g9IjMxNS4zOTk5OTQiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiAgPGVsbGlwc2Ugcnk9IjE5IiByeD0iMTAyIiBpZD0ic3ZnXzQiIGN5PSIzMjYuMjAwMDEyIiBjeD0iMzg4LjM5OTk5NCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMGJmYmYiLz4KICA8cGF0aCBpZD0ic3ZnXzYiIGQ9Im0yNzEuODI0MDk3LDI5OC4xMDQ3OTdxMTkuNTExNzE5LDEzLjQwMTEyMyAzOC45Nzk2MTQsMG0tMzQuNzUyMTA2LC0yNi40NjYxODdjMCwtMi4wNzA5MjMgMS42ODA5MDgsLTMuNzUwNzMyIDMuNzUwNzAyLC0zLjc1MDczMmMyLjA3MjA4MywwIDMuNzUwNzkzLDEuNjc5ODEgMy43NTA3OTMsMy43NTA3MzJjMCwyLjA3MDkyMyAtMS42Nzg3MTEsMy43NDk2OTUgLTMuNzUwNzkzLDMuNzQ5Njk1Yy0yLjA2OTc5NCwwIC0zLjc1MDcwMiwtMS42Nzg3NzIgLTMuNzUwNzAyLC0zLjc0OTY5NW0yMy4wNjY5ODYsMGMwLC0yLjA3MDkyMyAxLjY4MDkwOCwtMy43NTA3MzIgMy43NTA0ODgsLTMuNzUwNzMyYzIuMDcyMzI3LDAgMy43NTA5NzcsMS42Nzk4MSAzLjc1MDk3NywzLjc1MDczMmMwLDIuMDcwOTIzIC0xLjY3ODY1LDMuNzQ5Njk1IC0zLjc1MDk3NywzLjc0OTY5NWMtMi4wNjk1OCwwIC0zLjc1MDQ4OCwtMS42Nzg3NzIgLTMuNzUwNDg4LC0zLjc0OTY5NW0tNDMuNzgwNzAxLDEwLjc2NjY2M2wwLDBjMCwtMTkuODgyMDE5IDE2LjExNzAwNCwtMzYuMDAwMTIyIDM1Ljk5NzkyNSwtMzYuMDAwMTIyYzE5Ljg4MzQyMywwIDM2LjAwMDEyMiwxNi4xMTgxMDMgMzYuMDAwMTIyLDM2LjAwMDEyMmMwLDE5Ljg4MjAxOSAtMTYuMTE2Njk5LDM2LjAwMDEyMiAtMzYuMDAwMTIyLDM2LjAwMDEyMmMtMTkuODgwOTIsMCAtMzUuOTk3OTI1LC0xNi4xMTgxMDMgLTM1Ljk5NzkyNSwtMzYuMDAwMTIyem0wLDBsMCwwYzAsLTE5Ljg4MjAxOSAxNi4xMTcwMDQsLTM2LjAwMDEyMiAzNS45OTc5MjUsLTM2LjAwMDEyMmMxOS44ODM0MjMsMCAzNi4wMDAxMjIsMTYuMTE4MTAzIDM2LjAwMDEyMiwzNi4wMDAxMjJjMCwxOS44ODIwMTkgLTE2LjExNjY5OSwzNi4wMDAxMjIgLTM2LjAwMDEyMiwzNi4wMDAxMjJjLTE5Ljg4MDkyLDAgLTM1Ljk5NzkyNSwtMTYuMTE4MTAzIC0zNS45OTc5MjUsLTM2LjAwMDEyMnoiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiA8L2c+Cjwvc3ZnPg==">svg bild</a>                    med svg-edit
                 </p>
-                <footer class="signatur">Skrivet av Anders Bökelund <time>2015-08-28</time></footer>
+                <div class="signatur">Skrivet av Anders Bökelund
+                    <time>2015-08-28</time>
+                </div>
             </article>
-            
+
             <article id="entry3" class="blogg-entry">
                 <h3>Meh</h3>
                 <p>
-                    Lägger upp en trailer till buck bunny(i tre olika video format) enligt uppgift 1.7 och sedan gör en ankarlänk till detta inlägg på laborationssidan
-                    Endast ogg tror jag funkar för mig och jag var tvungen att kolla upp <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#Server_support">hur</a> man la till ogg vorbis till apache2
-                    Men det verkar inte fungera på c9.io(run) utan den syns nog när man publicerar på gith.io iallafall.
+                    Lägger upp en trailer till buck bunny(i tre olika video format) enligt uppgift 1.7 och sedan gör en ankarlänk till detta inlägg på laborationssidan Endast ogg tror jag funkar för mig och jag var tvungen att kolla upp <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#Server_support">hur</a>                    man la till ogg vorbis till apache2 Men det verkar inte fungera på c9.io(run) utan den syns nog när man publicerar på gith.io iallafall.
                 </p>
                 <p>
                     <video controls loop poster="pics/vlcsnap-2015-08-31-08h15m23s210.png">
                         <source src="video/trailer_480p.mov" type="video/mp4">
                         <source src="video/trailer_400p.ogg" type="video/ogg">
-                        <source src="video/trailer_iphone.m4v" type="video/m4v">
-                        Your browser probably does not support a suitable video codec
+                        <source src="video/trailer_iphone.m4v" type="video/m4v"> Your browser probably does not support a suitable video codec
                     </video>
                 </p>
                 <p>
                     Props till:
                     <a href="www.bigbuckbunny.org">(c) copyright 2008, Blender Foundation</a>
                 </p>
-                <footer class="signatur">Skrivet av Anders Bökelund <time>2015-08-29</time></footer>
+                <div class="signatur">Skrivet av Anders Bökelund
+                    <time>2015-08-29</time>
+                </div>
             </article>
             <article id="entry4" class="blogg-entry">
                 <h3>agh</h3>
-                    Hade tydligen döpt mappen till videos och inte video, därför fungerade inte videona
-                <footer class="signatur">Skrivet av Anders Bökelund <time>2015-08-31</time></footer>
+                <p>Hade tydligen döpt mappen till videos och inte video, därför fungerade inte videon</p>
+                <div class="signatur">Skrivet av Anders Bökelund
+                    <time>2015-08-31</time>
+                </div>
+            </article>
+            <article id="entry5" class="blogg-entry">
+                <h3>Övning 2.6 - inlägg</h3>
+                <img src="pics/Einstein_patentoffice.jpg" alt="bild på Einstein när han jobbade vid patentbyrån" class="right" />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod mi at leo posuere, ut iaculis turpis tempus. Aliquam nibh ex, placerat elementum orci vel, aliquet commodo neque. Nam lacinia risus ex, at rhoncus libero scelerisque tincidunt. In accumsan
+                    sapien mauris, et dignissim justo elementum quis. Donec imperdiet augue vel orci feugiat interdum. Mauris est quam, convallis vitae justo at, interdum fermentum tellus. Curabitur a massa turpis. Vivamus eleifend tincidunt ante ac sollicitudin.
+                    Cras sed urna ut nunc vehicula porttitor. Ut consequat turpis id augue auctor efficitur ac quis nunc. Mauris sit amet quam quis lorem gravida posuere nec non tortor. Suspendisse ut iaculis sem, at sagittis felis. Interdum et malesuada
+                    fames ac ante ipsum primis in faucibus. Fusce finibus tellus ut eros pulvinar ultricies. Praesent eu sem tellus. Vivamus ut est faucibus lectus commodo ultrices id sodales velit. Sed eget massa vitae nisi auctor laoreet. Nunc laoreet
+                    lobortis velit. Curabitur blandit purus tortor, et tincidunt magna fringilla vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec scelerisque lobortis magna, eu posuere lacus tempus consequat.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin suscipit dolor quis suscipit lobortis. Aenean pretium fringilla bibendum. Nullam eros sapien, pharetra in cursus quis, sagittis quis
+                    augue. Etiam sit amet pharetra nibh. Vivamus cursus, orci et dignissim mattis, urna tortor consectetur ex, ut luctus enim ex at lectus. Pellentesque ut justo a dolor rhoncus tempus. Ut at euismod neque, vel commodo orci. Maecenas sit
+                    amet lacus lacus. Fusce vestibulum cursus arcu, a efficitur massa lacinia eu. Nullam cursus ex sit amet purus laoreet pretium. Phasellus in tellus ut nisi lobortis tempus eget tempus lectus. Fusce eget mi id arcu ullamcorper posuere.
+                    Etiam mollis a nunc eu elementum. Proin venenatis ipsum ac leo facilisis dapibus. Donec at sapien odio. Integer convallis tincidunt tortor, eu congue enim convallis at. Sed efficitur ipsum non orci rhoncus commodo. Ut commodo varius
+                    condimentum. Nulla tincidunt at nisl at molestie. Cras et elementum arcu. Ut diam nulla, posuere ut dapibus et, feugiat sed ipsum. Pellentesque mi elit, fringilla non eleifend non, mollis vel felis. Fusce sagittis arcu sit amet tellus
+                    imperdiet, et scelerisque massa accumsan. Vestibulum eget nisi dui. Donec mi orci, iaculis nec massa a, bibendum euismod dui. Praesent sagittis feugiat felis, id ultrices dolor finibus a. Praesent consectetur iaculis dolor, eget imperdiet
+                    turpis placerat tempus.
+                </p>
+                <div class="signatur">Skrivet av Anders Bökelund
+                    <time>2015-08-31</time>
+                </div>
             </article>
         </section>
-    </body>
+        <aside>
+            <h2>Aside</h2>
+            <p>Ipsum</p>
+        </aside>
+        <footer>
+            Copywrite/Copyleft - Anders Bökelund
+        </footer>
+    </main>
+</body>
+
 </html>
