@@ -30,7 +30,7 @@ body{
     background-color: #7E0C00;
 }
 main{
-    background-color: #F03C29;    
+    background-color: #F03C29;   
 }
 header{
     background-color: #F08A29;    
@@ -68,6 +68,10 @@ section section{
 }
 :link{
     color: #CC1C09;
+}
+
+nav,section,article,aside,section section,.blogg-entry,.signatur,#contactForm{
+    border-radius:15px;
 }
 
 /* Container positioning and other settings */
@@ -112,6 +116,7 @@ header img {
     Heading layout and font settings
 */
 h1{
+    /* color exception here, only headline with its own color*/
     color: #680033;
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
@@ -171,7 +176,7 @@ p{
    font-family: 'Open Sans', sans-serif; 
 }
 
-/* List layout and font settings */
+/* General list layout and font settings */
 ol {
     list-style-type: decimal;
     margin-top: 1em;
@@ -200,7 +205,7 @@ ul li{
     background-position: 0% 0%;
 }
 
-/* Navigation*/
+/* Detailed navigation menu behaviour and layou*/
 /* Nav is in pixels since inherited nav's use parents nav no matter what you set them as apparently*/
 nav {
     float: left;
@@ -231,6 +236,8 @@ nav nav ul li,nav nav dl dd{
     text-align: left;
     width:100%;
     height:100%;
+    background-image:none;
+    padding:0;
 }
 nav nav ul li a,nav nav dl dd a{
     float:left;
@@ -259,8 +266,12 @@ nav nav ul,nav nav dl{
 nav nav ul li:hover > a, nav nav dl dd:hover > a{
     color:#FFFFFF;
 }
+/* active menuitem coloring*/
+.active{
+    color:gray;
+}
 
-/* Content containers settings and behaviour*/
+/* Content containers settings,layout and behaviour*/
 section {
     margin: 0px auto;
     max-width: 40%;
@@ -328,14 +339,16 @@ footer {
 }
 
 /*
-    Hur kontaktformuläret ska bete sig. Använde div eftersom jag inte hittade
-    en annan lämplig strukturtag för det
+    Contact form behaviour, layout and settings
 */
 #contactForm {
     float: left;
     width: 80%;
     max-width: 80%;
     min-width: 80%;
+}
+#button{
+    margin-left:20px;
 }
 
 /* TODO */
@@ -353,6 +366,4 @@ table thead tr{
 table tbody tr td{
     border: 1px solid black;
 }
-.active{
-    color:gray;
-}
+
