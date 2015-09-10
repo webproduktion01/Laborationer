@@ -36,22 +36,17 @@
             <form action="http://webproduction.standout.se/form.php" method="post" id="contact_form">
                 <fieldset>
                     <legend>Fråga</legend>
-                    <p>
-                        <label for="errand">Ärendetyp </label>
-                        <select name="errand" form="contact_form" id="errand">
-                            <option value="1">Fråga</option>
-                            <option value="2">Klagomål</option>
-                            <option value="3">Förfrågan</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="title">Rubrik: </label>
-                        <input type="text" name="title" id="title" value="Vad göra?" />
-                    </p>
-                    <p>
-                        <label for="question">Fråga: </label>
-                        <textarea name="question" form="contact_form" id="question">Jag sitter och testar formuläret.</textarea>
-                    </p>
+                    <label for="errand">Ärendetyp:</label>
+                    <select name="errand" form="contact_form" id="errand">
+                        <option value="1">Fråga</option>
+                        <option value="2">Klagomål</option>
+                        <option value="3">Förfrågan</option>
+                    </select>
+                    <label for="title">Rubrik: </label>
+                    <input type="text" name="title" id="title" value="Vad göra?" />
+                    <label for="question">Fråga: </label>
+                    <textarea name="question" form="contact_form" id="question">Jag sitter och testar formuläret.</textarea>
+
                 </fieldset>
                 <fieldset>
                     <legend>Information om dig</legend>
