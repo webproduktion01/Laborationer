@@ -195,7 +195,7 @@ h2{
     font-size: 1.5em;
     margin-top: 0em;
     margin-bottom: 0.83em;
-    margin-left: 0;
+    margin-left: 0.5em;
     margin-right: 0;
     font-weight: bold; 
 }
@@ -247,7 +247,7 @@ ol {
     list-style-type: decimal;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-left: 0;
+    margin-left: 0.5em;
     margin-right: 0;
     padding-left: 20px;
 }
@@ -275,6 +275,9 @@ ul li{
     background-size:20px;
     background-position: 0% 0.1em;
 }
+dl{
+    
+}
 dl dt{
     margin:0.75em 0 0.25em 0;
 }
@@ -282,7 +285,7 @@ dl dt dd{
     
 }
 
-/* Detailed navigation menu behaviour and layou*/
+/* Detailed navigation menu behaviour and layout*/
 /* Nav is in pixels since inherited nav's use parents nav(not grandparentparentetc) no matter what you set them as apparently*/
 nav {
     float: left;
@@ -298,15 +301,19 @@ nav nav{
     border-style:solid;
     margin-right:-1px;
 }
+nav nav dl dt{
+    margin:0;
+}
 nav nav ul,nav nav dl{
     float:left;
+    display:none;
     list-style-type:none;
     list-style:none;
     text-decoration:none;
     width:100%;
     padding-left: 0;
 }
-nav nav:hover > ul li ,nav nav:hover > dl dd{
+nav nav:hover > ul li, nav nav:hover > ul,nav nav:hover > dl dd, nav nav:hover > dl{
     display:block;
 }
 nav nav ul li,nav nav dl dd{
@@ -340,7 +347,6 @@ section {
     min-width: 40%;
     float: left;
 }
-
 section img {
     max-width: 25%;
 }
