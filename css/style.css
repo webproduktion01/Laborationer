@@ -134,6 +134,8 @@ section section{
     background-color: #CC1C09;
 }
 
+
+/* Playing around with border radius*/
 nav,section,article,aside,section section,.blogg-entry,.signatur,#contactForm{
     border-radius:15px;
 }
@@ -191,7 +193,7 @@ h1{
 h2{
     font-family: 'Lato', sans-serif;
     font-size: 1.5em;
-    margin-top: 0.83em;
+    margin-top: 0em;
     margin-bottom: 0.83em;
     margin-left: 0;
     margin-right: 0;
@@ -235,10 +237,12 @@ h6{
     font-weight: bold;
 }
 p{
-   font-family: 'Open Sans', sans-serif; 
+   font-family: 'Open Sans', sans-serif;
+   font-size:0.75em;
+   margin:0.5em;
 }
 
-/* General list layout and font settings */
+/* General list layout and settings*/
 ol {
     list-style-type: decimal;
     margin-top: 1em;
@@ -247,13 +251,14 @@ ol {
     margin-right: 0;
     padding-left: 20px;
 }
+ol li{
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
 ul {
     list-style-type:none;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 30px;
+    margin: 0;
+    padding-left: 0.5em;
     /*
     background-image:url(../pics/handmaidenmadeironmaiden.png);
     background-repeat:no-repeat;
@@ -263,15 +268,22 @@ ul {
 } 
 ul li{
     margin-bottom:.5em;
-    padding-left: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
     background-image:url(../pics/handmaidenmadeironmaiden.png);
     background-repeat:no-repeat;
     background-size:20px;
-    background-position: 0% 0%;
+    background-position: 0% 0.1em;
+}
+dl dt{
+    margin:0.75em 0 0.25em 0;
+}
+dl dt dd{
+    
 }
 
 /* Detailed navigation menu behaviour and layou*/
-/* Nav is in pixels since inherited nav's use parents nav no matter what you set them as apparently*/
+/* Nav is in pixels since inherited nav's use parents nav(not grandparentparentetc) no matter what you set them as apparently*/
 nav {
     float: left;
     max-width: 200px;
@@ -281,6 +293,10 @@ nav {
 nav nav{
     clear:left;
     width:100%;
+    border-right: 1px;
+    border-bottom:1px;
+    border-style:solid;
+    margin-right:-1px;
 }
 nav nav ul,nav nav dl{
     float:left;
@@ -289,7 +305,6 @@ nav nav ul,nav nav dl{
     text-decoration:none;
     width:100%;
     padding-left: 0;
-    /*border: solid 1px #000;*/
 }
 nav nav:hover > ul li ,nav nav:hover > dl dd{
     display:block;
@@ -303,6 +318,7 @@ nav nav ul li,nav nav dl dd{
     height:100%;
     background-image:none;
     padding:0;
+    margin:0;
 }
 nav nav ul li a,nav nav dl dd a{
     float:left;
@@ -315,32 +331,36 @@ nav nav ul li a:link,nav nav ul li a:visited,nav nav ul li a:active,nav nav dl d
 }
 
 
-
 /* Content containers settings,layout and behaviour*/
 section {
-    margin: 0px auto;
-    margin-bottom:0.5em;
-    margin-top:0.5em;
-    padding:0.5em;
+    margin:0 0 0.5em 0;
+    /* top right bottom left*/
+    padding:0 0.5em 0.5em 0.5em;
     max-width: 40%;
     min-width: 40%;
     float: left;
 }
+
 section img {
     max-width: 25%;
 }
 section section {
     max-width:100%;
     width:100%;
+    margin:0 0 0.5em 0;
+    padding:0;
+    
 }
 section.large{
+    float:right;
     position: relative;
     width: 80%;
     max-width: 80%;
-
+    margin:0;
+    padding:0;
 }
 article {
-    margin: 0px auto;
+    margin: 0 0 0.5em 0;
     position: relative;
 }
 article.large{
@@ -399,16 +419,25 @@ footer {
 /* TODO */
 /* Table settings, behaviour and coloring*/
 table {
-    border: 1px solid green;
-    border-spacing:1px;
-    border-color: orange;
-    border-collapse:separate;
+    border:0px;
+    border-style:solid;
+    text-align:center;
     width:100%;
+    border-collapse:collapse;
 }
 table thead tr{
-    border: 1px solid white;
+
 }
 table tbody tr td{
-    border: 1px solid black;
+
+}
+table tbody tr:nth-of-type(10n+1){
+     border-top: 1px;
+    border-style:solid;
+}
+table tfoot{
+    border-bottom:1px;
+    border-top:1px;
+    border-style:solid;
 }
 
