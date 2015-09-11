@@ -334,6 +334,37 @@ nav nav ul li a:link,nav nav ul li a:visited,nav nav ul li a:active,nav nav dl d
     height:inherit;
     width:inherit;
 }
+/* sprite icons */
+
+#home,#exercises,#communication,#introduction{
+    background-image:url(pics/sprite.png);
+    background-repeat:no-repeat;
+    background-position:0px 0px;
+    height:24px;
+    padding-left:24px;
+}
+
+#exercises{
+    background-position: 0px -96px;
+}
+#introduction{
+    background-position: 0px -192px;
+}
+#communication{
+    background-position:0px -288px;
+}
+#home:hover{
+    background-position: 0px -48px;
+}
+#exercises:hover{
+    background-position: 0px -144px;
+}
+#introduction:hover{
+    background-position: 0px -240px;
+}
+#communication:hover{
+    background-position:0px -336px;
+}
 
 
 /* Content containers settings,layout and behaviour*/
@@ -394,6 +425,11 @@ aside {
     max-width: 40%;
     width: 20%;
     min-width: 20%;
+    /* Temp */
+    background-image:url(pics/sprite.png);
+    background-repeat:no-repeat;
+    background-position:0px -96px;
+    height:360px;
 }
 footer {
     margin: 0 auto;
