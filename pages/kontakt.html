@@ -35,8 +35,6 @@
         </nav>
         <div id="contactForm">
             <h2>Observera! Detta är bara ett påhittat kontaktformulär</h2>
-            <!-- legacy code reminder  will probably use it for later on -->
-            <!--<form oninput="resultat.value=subject.id+'='+subject.value +' '+headline.id+'='+headline.value +' '+textarea.id+'='+textarea.value +' '+check_mail.id+'='+check_mail.checked+' '+check_phone.id+'='+check_phone.checked" id="contact_form"> -->
             <form action="http://webproduction.standout.se/form.php" method="post" id="contact_form">
                 <fieldset>
                     <legend>Fråga</legend>
@@ -61,8 +59,6 @@
                     <input type="checkbox" name="contact[]" value="phone" id="check_phone" />
                 </fieldset>
                 <input type="submit" value="Send" name="submit_button" id="button" />
-                <!-- Tested the result with <output>. Output probably gets used as a preview and then after doing a post after the user has verified that the information is correct -->
-                <!--<output name="resultat">Resultat:</output> -->
             </form>
         </div>
         <footer>
