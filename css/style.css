@@ -54,11 +54,8 @@
 h1{
     color:#DDDDDD;
 }
-h2,h3{
+h2,h3,h4,h5,h6{
     color: #580036;
-}
-h4,h5,h6{
-    color:#580036;
 }
 a {
     color: #F76067;
