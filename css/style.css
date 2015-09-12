@@ -132,25 +132,24 @@ footer{
 
 /* Playing around with border radius*/
 nav,section,article,aside,section section,.blogg-entry,.signatur,#contactForm{
-    border-radius:15px;
+    border-radius:1em;
 }
 
 /* Container positioning and other settings */
 body {
     margin: 0 auto;
-    margin-bottom:50px;
-    top: 0px;
+    margin-bottom:3.125em;
+    top: 0;
     /* So all pages are exactly the same(scrollbar not visible in kontakt.html due to too little content   */
     overflow-y:scroll;
 }
 main {
-    margin: 0px auto;
-    max-width: 1200px;
-    width: 1000px;
-    min-width: 960px;
+    margin: 0 auto;
+    max-width: 75em;
+    min-width: 60em;
     position: relative;
-    bottom: 50px;
-    top: 0px;
+    bottom: 3.125em;
+    top: 0;
     overflow:hidden;
 }
 header {
@@ -158,7 +157,7 @@ header {
     max-height: 6em;
     background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0ODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBTVkctZWRpdCAtIGh0dHA6Ly9zdmctZWRpdC5nb29nbGVjb2RlLmNvbS8gLS0+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzA3LjM1NTM0NjY3OTY4NzUsMjQ1LjIwMDAxMjIwNzAzMTI1IDI0OC42NTI2NDg5MjU3ODEyNSwzMjUuOTk3Mzc1NDg4MjgxMjUgMTUzLjY2OTY0NzIxNjc5Njg4LDI5NS4xMzU1Mjg1NjQ0NTMxIDE1My42Njk2NDcyMTY3OTY4OCwxOTUuMjY0NDk1ODQ5NjA5MzggMjQ4LjY1MjY0ODkyNTc4MTI1LDE2NC40MDI2NDg5MjU3ODEyNSAzMDcuMzU1MzQ2Njc5Njg3NSwyNDUuMjAwMDEyMjA3MDMxMjUgIiBzdHJva2VXaWR0aD0iNSIgc3Ryb2tlY29sb3I9IiMwMDAwMDAiIGZpbGw9IiNGRjAwMDAiIGVkZ2U9Ijk5Ljg3MTAyOCIgb3JpZW50PSJ4IiBzaWRlcz0iNSIgc2hhcGU9InJlZ3VsYXJQb2x5IiBpZD0ic3ZnXzEiIGN5PSIxOTUuMjAwMDEyIiBjeD0iOTkuMzk5OTk0Ii8+CiAgPHBvbHlnb24gc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCA0MzcuNTIzMTAxODA2NjQwNiwyMDAuOTY3NzEyNDAyMzQzNzUgMzc5Ljg0OTI0MzE2NDA2MjUsMjQ0LjY5MjkzMjEyODkwNjI1IDQwMC44MDczNDI1MjkyOTY5LDMxMy45NjcyMjQxMjEwOTM3NSAzNDEuMzk5OTkzODk2NDg0NCwyNzIuNjI3OTI5Njg3NSAyODEuOTkyNjE0NzQ2MDkzNzUsMzEzLjk2NzIyNDEyMTA5Mzc1IDMwMi45NTA3NDQ2Mjg5MDYyNSwyNDQuNjkyOTMyMTI4OTA2MjUgMjQ1LjI3Njg1NTQ2ODc1LDIwMC45Njc3MTI0MDIzNDM3NSAzMTcuNjM3MDU0NDQzMzU5NCwxOTkuNDkzMTMzNTQ0OTIxODggMzQxLjM5OTk5Mzg5NjQ4NDQsMTMxLjEzMDE4Nzk4ODI4MTI1IDM2NS4xNjI5MzMzNDk2MDk0LDE5OS40OTMxMzM1NDQ5MjE4OCAiIHN0cm9rZVdpZHRoPSI1IiBzdHJva2Vjb2xvcj0iIzAwMDAwMCIgZmlsbD0iIzAwMDBmZiIgb3JpZW50PSJwb2ludCIgcjI9IjQwLjQyNzkzMyIgcj0iMTAxLjA2OTgzMyIgcG9pbnQ9IjEiIHNoYXBlPSJzdGFyIiBpZD0ic3ZnXzIiIGN5PSIxNzkuMjAwMDEyIiBjeD0iMjg1LjM5OTk5NCIvPgogIDxlbGxpcHNlIHJ5PSI0NiIgcng9IjIzNyIgaWQ9InN2Z18zIiBjeT0iMzIyLjIwMDAxMiIgY3g9IjMxNS4zOTk5OTQiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiAgPGVsbGlwc2Ugcnk9IjE5IiByeD0iMTAyIiBpZD0ic3ZnXzQiIGN5PSIzMjYuMjAwMDEyIiBjeD0iMzg4LjM5OTk5NCIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiMwMGJmYmYiLz4KICA8cGF0aCBpZD0ic3ZnXzYiIGQ9Im0yNzEuODI0MDk3LDI5OC4xMDQ3OTdxMTkuNTExNzE5LDEzLjQwMTEyMyAzOC45Nzk2MTQsMG0tMzQuNzUyMTA2LC0yNi40NjYxODdjMCwtMi4wNzA5MjMgMS42ODA5MDgsLTMuNzUwNzMyIDMuNzUwNzAyLC0zLjc1MDczMmMyLjA3MjA4MywwIDMuNzUwNzkzLDEuNjc5ODEgMy43NTA3OTMsMy43NTA3MzJjMCwyLjA3MDkyMyAtMS42Nzg3MTEsMy43NDk2OTUgLTMuNzUwNzkzLDMuNzQ5Njk1Yy0yLjA2OTc5NCwwIC0zLjc1MDcwMiwtMS42Nzg3NzIgLTMuNzUwNzAyLC0zLjc0OTY5NW0yMy4wNjY5ODYsMGMwLC0yLjA3MDkyMyAxLjY4MDkwOCwtMy43NTA3MzIgMy43NTA0ODgsLTMuNzUwNzMyYzIuMDcyMzI3LDAgMy43NTA5NzcsMS42Nzk4MSAzLjc1MDk3NywzLjc1MDczMmMwLDIuMDcwOTIzIC0xLjY3ODY1LDMuNzQ5Njk1IC0zLjc1MDk3NywzLjc0OTY5NWMtMi4wNjk1OCwwIC0zLjc1MDQ4OCwtMS42Nzg3NzIgLTMuNzUwNDg4LC0zLjc0OTY5NW0tNDMuNzgwNzAxLDEwLjc2NjY2M2wwLDBjMCwtMTkuODgyMDE5IDE2LjExNzAwNCwtMzYuMDAwMTIyIDM1Ljk5NzkyNSwtMzYuMDAwMTIyYzE5Ljg4MzQyMywwIDM2LjAwMDEyMiwxNi4xMTgxMDMgMzYuMDAwMTIyLDM2LjAwMDEyMmMwLDE5Ljg4MjAxOSAtMTYuMTE2Njk5LDM2LjAwMDEyMiAtMzYuMDAwMTIyLDM2LjAwMDEyMmMtMTkuODgwOTIsMCAtMzUuOTk3OTI1LC0xNi4xMTgxMDMgLTM1Ljk5NzkyNSwtMzYuMDAwMTIyem0wLDBsMCwwYzAsLTE5Ljg4MjAxOSAxNi4xMTcwMDQsLTM2LjAwMDEyMiAzNS45OTc5MjUsLTM2LjAwMDEyMmMxOS44ODM0MjMsMCAzNi4wMDAxMjIsMTYuMTE4MTAzIDM2LjAwMDEyMiwzNi4wMDAxMjJjMCwxOS44ODIwMTkgLTE2LjExNjY5OSwzNi4wMDAxMjIgLTM2LjAwMDEyMiwzNi4wMDAxMjJjLTE5Ljg4MDkyLDAgLTM1Ljk5NzkyNSwtMTYuMTE4MTAzIC0zNS45OTc5MjUsLTM2LjAwMDEyMnoiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlPSIjMDAwMDAwIiBmaWxsPSIjMDBiZmJmIi8+CiA8L2c+Cjwvc3ZnPg==);
     background-repeat:repeat;
-    background-size:50px;
+    background-size:3.125em;
 }
 header img {
     display: block;
@@ -244,7 +243,7 @@ ol {
     margin-bottom: 1em;
     margin-left: 0.5em;
     margin-right: 0;
-    padding-left: 20px;
+    padding-left: 1.25em;
 }
 ol li{
     padding-left: 0.25em;
@@ -254,12 +253,6 @@ ul {
     list-style-type:none;
     margin: 0;
     padding-left: 0.5em;
-    /*
-    background-image:url(../pics/handmaidenmadeironmaiden.png);
-    background-repeat:no-repeat;
-    background-size:20px;
-    background-position: 0% 0%;
-    */
 } 
 ul li{
     margin-bottom:.5em;
@@ -267,7 +260,7 @@ ul li{
     padding-right: 1em;
     background-image:url(../pics/handmaidenmadeironmaiden.png);
     background-repeat:no-repeat;
-    background-size:20px;
+    background-size:1.25em;
     background-position: 0% 0.1em;
 }
 dl{
@@ -286,17 +279,17 @@ dl dt dd{
 */
 nav {
     float: left;
-    max-width: 200px;
-    min-width: 200px;
-    width: 200px;
+    max-width: 12.5em;
+    min-width: 12.5em;
+    width: 12.5em;
 }
 nav nav{
     clear:left;
     width:100%;
-    border-right: 1px;
-    border-bottom:1px;
+    border-right: 0.0625em;
+    border-bottom:0.0625em;
     border-style:solid;
-    margin-right:-1px;
+    margin-right:-0.0625em;
 }
 nav nav dl dt{
     margin:0;
@@ -337,9 +330,9 @@ nav nav ul li a:link,nav nav ul li a:visited,nav nav ul li a:active,nav nav dl d
 #home,#exercises,#communication,#introduction{
     background-image:url(pics/sprite.png);
     background-repeat:no-repeat;
-    background-position:0px 0px;
-    height:24px;
-    padding-left:24px;
+    background-position:0 0;
+    height:1.5em;
+    padding-left:1.5em;
 }
 #exercises{
     background-position: 0px -96px;
@@ -397,10 +390,8 @@ article {
 }
 article.large{
     position: relative;
-    width: 80%;
     max-width: 80%;
     overflow:auto;
-    height:1000px;
 }
 article video {
     max-width: 30%;
@@ -420,7 +411,6 @@ aside {
     margin: 0 auto;
     float: left;
     max-width: 40%;
-    width: 20%;
     min-width: 20%;
 }
 footer {
@@ -446,26 +436,26 @@ footer {
     min-width: 80%;
 }
 #button{
-    margin-left:20px;
+    margin-left:1.25em;
 }
 form{
     display:block;
 }
 legend{
     display: block;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 0.125em;
+    padding-right: 0.125em;
     border: none;
 }
 fieldset {
     display: block;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 0.125em;
+    margin-right: 0.125em;
     padding-top: 0.35em;
     padding-bottom: 0.625em;
     padding-left: 0.75em;
     padding-right: 0.75em;
-    border: 2px groove;
+    border: 0.125em groove;
 } 
 label,input,select,textarea {
     float:left;
@@ -485,7 +475,7 @@ textarea,#title{
 /* TODO */
 /* Table settings, behaviour and coloring*/
 table {
-    border:0px;
+    border:0;
     border-style:solid;
     text-align:center;
     width:100%;
@@ -498,12 +488,12 @@ table tbody tr td{
 
 }
 table tbody tr:nth-of-type(10n+1){
-     border-top: 1px;
+     border-top: 0.0625em;
     border-style:solid;
 }
 table tfoot{
-    border-bottom:1px;
-    border-top:1px;
+    border-bottom:0.0625em;
+    border-top:0.0625em;
     border-style:solid;
 }
 
