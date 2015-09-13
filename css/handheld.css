@@ -1,11 +1,21 @@
 /* CSS - Cascading Style Sheet */
 
 /* CSS target is  screens <=240px*/
+/* Target is also and old cellphone with a old android browser agent that does not support HTML5*/
 
+h1{
+    font-size:1.5em;
+}
 main{
     max-width:15em;
     width:100%;
     min-width:12.5em;
+}
+header{
+    background-image:none;
+}
+header img{
+    display:none;
 }
 section{
     max-width: 100%;
@@ -30,4 +40,9 @@ aside{
 }
 #contactForm{
     min-width:12.5em;
+}
+footer{
+    /* Footern syns ej ändå på min gamla mobil*/
+    
+    display:none;
 }
