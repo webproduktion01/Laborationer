@@ -1,6 +1,6 @@
 /* CSS - Cascading Style Sheet */
 
-/* CSS target is  200px< screens <240px*/
+/* CSS target is  screens <=240px*/
 
 main{
     max-width:15em;
@@ -27,4 +27,7 @@ section section{
 aside{
     width:100%;
     clear:both;
+}
+#contactForm{
+    min-width:12.5em;
 }

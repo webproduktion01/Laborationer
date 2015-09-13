@@ -1,15 +1,24 @@
 /* CSS - Cascading Style Sheet */
 
-/* CSS target is 240px <phones >=480px~ */
 
-section,section{
-    max-width:480px;
-    width:auto;
-    min-width:15em;
-    
+/* CSS target is 480px < phones >240px */
+main{
+    margin:0;
 }
-section.large{
-    min-width:15em;
-    width:100%;
-    clear:left;
+
+section
+section {
+    max-width: 30em;
+    width: auto;
+    min-width: 12.5em;
+}
+section{
+    max-width:30em;
+}
+
+section.large {
+    max-width:30em;
+    min-width: 12.5em;
+    width: 100%;
+    clear: left;
 }

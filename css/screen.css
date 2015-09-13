@@ -1,5 +1,5 @@
 /* CSS - Cascading Style Sheet */
 
-section section{
-
+section.large{
+    width:100%;
 }
