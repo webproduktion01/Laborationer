@@ -208,7 +208,6 @@ nav nav dl {
     list-style: none;
     text-decoration: none;
     width: 100%;
-    padding-left: 0;
 }
 
 nav nav:hover > ul li,
@@ -236,7 +235,6 @@ nav nav dl dd a {
     float: left;
     width: 100%;
 }
-
 nav nav ul li a:link,
 nav nav ul li a:visited,
 nav nav ul li a:active,
@@ -247,9 +245,6 @@ nav nav dl dd a:active {
     height: inherit;
     width: inherit;
 }
-
-
-
 
 
 /* Content containers settings,layout and behaviour*/
@@ -432,36 +427,36 @@ table tfoot {
 #introduction {
     background-image: url(pics/sprite.png);
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: 0 -48px;
     height: 1.5em;
     padding-left:1.5em;
     width:11em;
 }
 
 #exercises {
-    background-position: 0px -96px;
-}
-
-#introduction {
-    background-position: 0px -192px;
-}
-
-#communication {
-    background-position: 0px -288px;
-}
-
-#home:hover {
-    background-position: 0px -48px;
-}
-
-#exercises:hover {
     background-position: 0px -144px;
 }
 
-#introduction:hover {
+#introduction {
     background-position: 0px -240px;
 }
 
-#communication:hover {
+#communication {
     background-position: 0px -336px;
+}
+
+#home:hover {
+    background-position: 0px 0px;
+}
+
+#exercises:hover {
+    background-position: 0px -96px;
+}
+
+#introduction:hover {
+    background-position: 0px -192px;
+}
+
+#communication:hover {
+    background-position: 0px -288px;
 }
