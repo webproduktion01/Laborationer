@@ -17,6 +17,9 @@ header{
 header img{
     display:none;
 }
+nav nav ul{
+    padding-left:0;
+}
 section{
     max-width: 100%;
     min-width:12.5em;
@@ -57,6 +60,7 @@ footer{
     background-position: 0 0;
     height: 1.5em;
     width:11em;
+    padding:0;
 }
 
 #exercises,#introduction,#communication,#home:hover,#exercises:hover,#introduction:hover,#communication:hover {
