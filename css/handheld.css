@@ -3,13 +3,19 @@
 /* CSS target is  screens <=240px*/
 /* Target is also and old cellphone with a old android browser agent that does not support HTML5*/
 
+/*
+
 body{
     height:50em;
     overflow-y:scroll;
 }
+*/
 h1{
-    font-size:1.5em;
+    font-size:1.25em;
+    margin-bottom:0.33em;
+    margin-top:0.33em;
 }
+/*
 main{
     max-width:15em;
     width:100%;
@@ -48,13 +54,22 @@ aside{
 #contactForm{
     min-width:12.5em;
 }
+
+*/
+
+/* Footern syns ej ändå på min gamla mobil browser*/
+
+/*
 footer{
-    /* Footern syns ej ändå på min gamla mobil*/
+
     
     display:none;
 }
-/* sprite icons for menu*/
 
+*/
+
+/* sprite icons for menu*/
+/*
 #home,
 #exercises,
 #communication,
@@ -70,3 +85,4 @@ footer{
 #exercises,#introduction,#communication,#home:hover,#exercises:hover,#introduction:hover,#communication:hover {
     background-position: 0;
 }
+*/

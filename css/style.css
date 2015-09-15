@@ -19,18 +19,19 @@ section section,
 
 body {
     margin: 0 auto;
-    margin-bottom: 3.125em;
+    margin-bottom: 1%;
     top: 0;
-    /* So all pages are exactly the same(scrollbar not visible in kontakt.html due to too little content   */
+    /* So all pages are exactly the same(scrollbar not visible in kontakt.html due to too little content)   */
     overflow-y: scroll;
+    margin-left:5%;
+    margin-right:5%;
 }
 
 main {
     margin: 0 auto;
-    max-width: 75em;
-    min-width: 12.5em;
+    max-width: 1200px;
+    min-width: 200px;
     position: relative;
-    padding-bottom: 3.125em;
     overflow: hidden;
 }
 
@@ -183,9 +184,9 @@ dl dt dd {}
 
 nav {
     float: left;
-    max-width: 12.5em;
-    min-width: 12.5em;
-    width: 12.5em;
+    max-width: inherit;
+    min-width: inherit;
+    width: 20%;
 }
 
 nav nav {
@@ -209,6 +210,7 @@ nav nav dl {
     list-style: none;
     text-decoration: none;
     width: 100%;
+    padding-left:0;
 }
 
 nav nav:hover > ul li,
@@ -251,19 +253,27 @@ nav nav dl dd a:active {
 
 /* Content containers settings,layout and behaviour*/
 
+.larger{
+    max-width:100%;
+    min-width:50%;
+    width:80%;
+    float:left;
+}
+
 section {
     margin: 0 0 0.5em 0;
     /* top right bottom left*/
     padding: 0 0.5em 0.5em 0.5em;
-    max-width: 30em;
-    min-width: 30em;
+    max-width: 40%;
+    min-width: 40%;
     float: left;
 }
 
 section.large {
     position: relative;
-    max-width: 45em;
-    min-width: 15em;
+    max-width: 100%;
+    min-width: 20%;
+    width:66.667%;
     margin: 0;
     padding: 0;
 }
@@ -275,10 +285,8 @@ section img {
 section section {
     width:100%;
     max-width: 100%;
-    min-width: 15em;
+    min-width: 20%;
     padding: 0;
-    left: 0px;
-    position: relative;
 }
 
 article {
@@ -290,7 +298,7 @@ article {
 
 article.large {
     position: relative;
-    max-width: 60em;
+    max-width: 80%;
     overflow: auto;
 }
 
@@ -317,9 +325,9 @@ article video {
 
 aside {
     float: left;
-    max-width: 37.5em;
+    max-width: 50%;
     width: auto;
-    min-width: 12.5em;
+    min-width: 16.667%;
     position: relative;
 }
 
@@ -341,9 +349,9 @@ footer {
 #contactForm {
     display: block;
     float: left;
-    width: 66.66%;
-    max-width: 66.66%;
-    min-width: 66.66%;
+    width: 66.667%;
+    max-width: 66.667%;
+    min-width: 66.667%;
 }
 
 #button {
@@ -434,8 +442,8 @@ table tfoot {
     background-repeat: no-repeat;
     background-position: 0 -48px;
     height: 1.5em;
-    padding-left: 1.5em;
-    width: 11em;
+    padding-left: 12%;
+    width: 88%;
 }
 
 #exercises {
