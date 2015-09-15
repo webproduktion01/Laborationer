@@ -128,7 +128,7 @@ h6 {
 
 p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.75em;
+    font-size: 1em;
     margin: 0.5em;
 }
 
@@ -273,6 +273,7 @@ section img {
 }
 
 section section {
+    width:100%;
     max-width: 100%;
     min-width: 15em;
     padding: 0;
@@ -340,9 +341,9 @@ footer {
 #contactForm {
     display: block;
     float: left;
-    width: 80%;
-    max-width: 80%;
-    min-width: 80%;
+    width: 60%;
+    max-width: 60%;
+    min-width: 60%;
 }
 
 #button {

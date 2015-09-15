@@ -22,3 +22,7 @@ section.large {
     width: 100%;
     clear: left;
 }
+#contactForm{
+    max-width:80%;
+    min-width:15em;
+}
