@@ -3,6 +3,10 @@
 /* CSS target is  screens <=240px*/
 /* Target is also and old cellphone with a old android browser agent that does not support HTML5*/
 
+body{
+    height:50em;
+    overflow-y:scroll;
+}
 h1{
     font-size:1.5em;
 }
