@@ -4,8 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Lite om mig </title>
+    <link rel="shortcut icon" href="../pics/handmaidenmadeironmaiden.png" type="image/png" id="favicon" />
     <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/color.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:481px)" href="../css/screen.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:480px)" href="../css/largescreenphones.css" />
+    <!-- handheld attribute value is deprecated-->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:240px)" href="../css/handheld.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -22,10 +28,10 @@
             <nav>
                 <h4>Navigationsmeny</h4>
                 <ul>
-                    <li><a href="../index.html">start</a></li>
-                    <li><a href="laborationer.html">laborationer</a></li>
-                    <li><a href="presentation.html" class="active">presentation</a></li>
-                    <li><a href="kontakt.html">kontakt</a></li>
+                    <li><a href="../index.html" id="home">start</a></li>
+                    <li><a href="laborationer.html" id="exercises">laborationer</a></li>
+                    <li><a href="presentation.html" class="active" id="introduction">presentation</a></li>
+                    <li><a href="kontakt.html" id="communication">kontakt</a></li>
                 </ul>
             </nav>
             <nav>
@@ -37,115 +43,119 @@
                 </dl>
             </nav>
         </nav>
-        <section>
-            <h2>Lite information om mig</h2>
-            <section>
-                <h4>Intressen</h4>
-                <ul>
-                    <li>Datorspel</li>
-                    <li>Fiske</li>
-                    <li>Golf</li>
-                    <li>Teknik och vetenskap
-                        <p><img src="../pics/Einstein_patentoffice.jpg" id="foto" alt="en bild på medelålders Albert Einstein med vit bakgrund" /></p>
-                    </li>
-                </ul>
+        <!-- Using a div here for once since a section requires a headline always and i can't think of a necessary headline for it since its used purely for positioning-->
+        <div class="larger">
+            <section class="large">
+                <h2>Lite information om mig</h2>
+                <section>
+                    <h4>Intressen</h4>
+                    <ul>
+                        <li>Datorspel</li>
+                        <li>Fiske</li>
+                        <li>Golf</li>
+                        <li>Teknik och vetenskap
+                            <p><img src="../pics/Einstein_patentoffice.jpg" id="foto" alt="en bild på medelålders Albert Einstein med vit bakgrund" /></p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Familj</h4>
+                    <ul>
+                        <li>Far</li>
+                        <li>Mor</li>
+                        <li>Bror</li>
+                        <li>2 katter</li>
+                    </ul>
+                    <p>Är singel, har inget emot att tjejer tar initiativet.</p>
+                </section>
+                <section>
+                    <h4>Vad du är bra respektive mindre bra på</h4>
+                    <ul>
+                        <li>
+                            Bra
+                            <ul>
+                                <li>Saker som kräver envishet och målmedvetenhet</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Mindre bra på
+                            <ul>
+                                <li>fungera utan mat</li>
+                                <li>fungera utan sömn</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Tidigare utbildning?</h4>
+                    <ul>
+                        <li>Fredrika Bremer - Naturvetenskaplig gymnasieutbildning</li>
+                        <li>Komplettering av betyg på centrumvux</li>
+                        <li>KTH - Högskoleingenjör : <a href="https://www.kth.se/utbildning/hogskoleingenjor/2.212/datateknik-med-inriktning-mot-datornatverk-kommunikation-och-sakerhet-180-hp-1.4157">Datateknik - Datorkommunikation och säkerthet</a></li>
+                        <li>Academedia - KY - Oracle Databasadministratör</li>
+                        <li>PÅGÅENDE - Plushögskolan - KY - <a href="http://www.plushogskolan.se/Utbildning/Utbildningar/SystemutvecklareNET.aspx">Systemutvecklare .NET</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Arbetslivserfarenhet?</h4>
+                    <ul>
+                        <li>Arla Kallhäll - Ordermottagare</li>
+                        <li>Vattenfall - Elmätareavläsare</li>
+                        <li>Fruktbolaget i Stockholm AB - Lagerarbetare</li>
+                        <li>Xpeedio(Help at work ab) - IT-support tekniker i NOC miljö</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Har du programmerat tidigare?</h4>
+                    <ul>
+                        <li>
+                            <p>
+                                Ja, har tampats med följande språk i bokstavsordning
+                            </p>
+                            <ul>
+                                <li>Assembly</li>
+                                <li>Bash</li>
+                                <li>C</li>
+                                <li>Java</li>
+                                <li>js</li>
+                                <li>jsp</li>
+                                <li>Python</li>
+                                <li>PLSQL</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Vad fick dig att söka utbildningen?</h4>
+                    <ul>
+                        <li>Gillar programmering</li>
+                        <li>När jag först sökte KY-utbildning så var det som databasutvecklare inte administratör så jag tänkte att det dags att ta i tag i det</li>
+                        <li>Hittade praktiskt boende i närheten av utbildningen</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Tankar inför framtiden?</h4>
+                    <ol>
+                        <!-- En hel del önsketänkande -->
+                        <li>Att jag ska sluta använda oindexerade listor för mycket</li>
+                        <li>Fixa jobb</li>
+                        <li>Fixa LIA</li>
+                        <li>Gräva upp runt grunden och fuktisolera utsidan av husgrunden</li>
+                        <li>Fixa en bastu och toalett i duschrummet</li>
+                        <li>Fixa heltäckande gymmatta i gymmet</li>
+                        <li>Fixa mer redskap till gymmet</li>
+                        <li>Besöka en golf custom outfitter</li>
+                        <li>Orka sätta igång med raspberry projektet</li>
+                        <li>göra mer birdies(få stil på puttandet) samt sänka hcp till runt 0</li>
+                        <li>Hitta en kompatibel person av motsatta könet</li>
+                    </ol>
+                </section>
+
             </section>
-            <section>
-                <h4>Familj</h4>
-                <ul>
-                    <li>Far</li>
-                    <li>Mor</li>
-                    <li>Bror</li>
-                    <li>2 katter</li>
-                </ul>
-                <p>Är singel, har inget emot att tjejer tar initiativet.</p>
-            </section>
-            <section>
-                <h4>Vad du är bra respektive mindre bra på</h4>
-                <ul>
-                    <li>
-                        Bra
-                        <ul>
-                            <li>Saker som kräver envishet och målmedvetenhet</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Mindre bra på
-                        <ul>
-                            <li>fungera utan mat</li>
-                            <li>fungera utan sömn</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h4>Tidigare utbildning?</h4>
-                <ul>
-                    <li>Fredrika Bremer - Naturvetenskaplig gymnasieutbildning</li>
-                    <li>Komplettering av betyg på centrumvux</li>
-                    <li>KTH - Högskoleingenjör : <a href="https://www.kth.se/utbildning/hogskoleingenjor/2.212/datateknik-med-inriktning-mot-datornatverk-kommunikation-och-sakerhet-180-hp-1.4157">Datateknik - Datorkommunikation och säkerthet</a></li>
-                    <li>Academedia - KY - Oracle Databasadministratör</li>
-                    <li>PÅGÅENDE - Plushögskolan - KY - <a href="http://www.plushogskolan.se/Utbildning/Utbildningar/SystemutvecklareNET.aspx">Systemutvecklare .NET</a></li>
-                </ul>
-            </section>
-            <section>
-                <h4>Arbetslivserfarenhet?</h4>
-                <ul>
-                    <li>Arla Kallhäll - Ordermottagare</li>
-                    <li>Vattenfall - Elmätareavläsare</li>
-                    <li>Fruktbolaget i Stockholm AB - Lagerarbetare</li>
-                    <li>Xpeedio(Help at work ab) - IT-support tekniker i NOC miljö</li>
-                </ul>
-            </section>
-            <section>
-                <h4>Har du programmerat tidigare?</h4>
-                <ul>
-                    <li>
-                        <p>
-                            Ja, har tampats med följande språk i bokstavsordning
-                        </p>
-                        <ul>
-                            <li>Assembly</li>
-                            <li>Bash</li>
-                            <li>C</li>
-                            <li>Java</li>
-                            <li>js</li>
-                            <li>jsp</li>
-                            <li>Python</li>
-                            <li>PLSQL</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h4>Vad fick dig att söka utbildningen?</h4>
-                <ul>
-                    <li>Gillar programmering</li>
-                    <li>När jag först sökte KY-utbildning så var det som databasutvecklare inte administratör så jag tänkte att det dags att ta i tag i det</li>
-                    <li>Hittade praktiskt boende i närheten av utbildningen</li>
-                </ul>
-            </section>
-            <section>
-                <h4>Tankar inför framtiden?</h4>
-                <ol>
-                    <!-- En hel del önsketänkande -->
-                    <li>Att jag ska sluta använda oindexerade listor för mycket</li>
-                    <li>Fixa jobb</li>
-                    <li>Fixa LIA</li>
-                    <li>Gräva upp runt grunden och fuktisolera utsidan av husgrunden</li>
-                    <li>Fixa en bastu och toalett i duschrummet</li>
-                    <li>Fixa heltäckande gymmatta i gymmet</li>
-                    <li>Fixa mer redskap till gymmet</li>
-                    <li>Besöka en golf custom outfitter</li>
-                    <li>Orka sätta igång med raspberry projektet</li>
-                    <li>göra mer birdies(få stil på puttandet) samt sänka hcp till runt 0</li>
-                    <li>Hitta en kompatibel person av motsatta könet</li>
-                </ol>
-            </section>
-        </section>
-        <aside>
-            <h2>random media</h2>
-        </aside>
+            <aside>
+                <h2>random media</h2>
+            </aside>
+        </div>
         <footer>
             Copywrite/Copyleft - Anders Bökelund
         </footer>

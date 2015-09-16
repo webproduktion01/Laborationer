@@ -1,0 +1,91 @@
+/* CSS - Cascading Style Sheet */
+
+/* CSS target is  screens <=240px*/
+/* Target is also and old cellphone with a old android browser agent that does not support HTML5*/
+
+/*
+
+body{
+    height:50em;
+    overflow-y:scroll;
+}
+*/
+h1{
+    font-size:1.25em;
+    margin-bottom:0.33em;
+    margin-top:0.33em;
+}
+/*
+main{
+    max-width:15em;
+    width:100%;
+    min-width:12.5em;
+}
+header{
+    background-image:none;
+}
+header img{
+    display:none;
+}
+nav nav ul{
+    padding-left:0;
+}
+section{
+    max-width: 100%;
+    min-width:12.5em;
+    width:100%;
+    clear:both;
+}
+section.large{
+    max-width: 100%;
+    min-width:12.5em;
+    width:100%;
+}
+section section{
+    max-width:100%;
+    min-width:12.5em;
+    width:100%;
+    clear:both;
+}
+aside{
+    width:100%;
+    clear:both;
+}
+#contactForm{
+    min-width:12.5em;
+}
+
+*/
+
+/* Footern syns ej ändå på min gamla mobil browser*/
+
+/*
+footer{
+
+    
+    display:none;
+}
+
+*/
+
+/* sprite icons for menu*/
+/*
+#home,
+#exercises,
+#communication,
+#introduction {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 1.5em;
+    width:11em;
+    padding:0;
+}
+
+#exercises,#introduction,#communication,#home:hover,#exercises:hover,#introduction:hover,#communication:hover {
+    background-position: 0;
+}
+*/
+thead{
+    font-size:90%;
+}

@@ -1,0 +1,39 @@
+/* CSS - Cascading Style Sheet */
+
+
+/* CSS target is 480px < phones >240px */
+
+/* Tighter margins*/
+h1{
+    margin-bottom:0.33em;
+    margin-top:0.33em;
+}
+
+section
+section {
+
+}
+section{
+    max-width:100%;
+}
+
+section.large {
+    max-width:100%;
+    min-width: 60%;
+    width: 100%;
+    clear: left;
+}
+#contactForm{
+    max-width:80%;
+    min-width:200px;
+}
+.larger{
+    min-width:200px;
+}
+ul{
+  padding-left:0;  
+}
+
+thead{
+    font-size:90%;
+}
