@@ -8,18 +8,23 @@ h1{
     margin-bottom:0.33em;
     margin-top:0.33em;
 }
+.larger{
+    width:100%;
+    min-width:200px;
+}
 
 section
 section {
 
 }
+
 section{
     max-width:100%;
 }
 
 section.large {
     max-width:100%;
-    min-width: 60%;
+    min-width: 70%;
     width: 100%;
     clear: left;
 }
@@ -27,9 +32,10 @@ section.large {
     max-width:80%;
     min-width:200px;
 }
-.larger{
-    min-width:200px;
+aside{
+    width:10%;
 }
+
 ul{
   padding-left:0;  
 }
