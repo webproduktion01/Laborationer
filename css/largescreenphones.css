@@ -2,38 +2,59 @@
 
 
 /* CSS target is 480px < phones >240px */
+/* Expanding menu to cover whole screen. Should probably expand menuitem text as well*/
+nav {
+    max-width:100%;
+    width:100%
+}
 
 /* Tighter margins*/
 h1{
     margin-bottom:0.33em;
     margin-top:0.33em;
 }
+.larger{
+    width:inherit;
+    min-width:200px;
+    max-width:100%;
+}
 
 section
 section {
 
 }
+
 section{
     max-width:100%;
 }
 
 section.large {
     max-width:100%;
-    min-width: 60%;
+    min-width: 70%;
     width: 100%;
     clear: left;
 }
+/* Also expanding contact form to cover 100%*/
 #contactForm{
-    max-width:80%;
+    max-width:100%;
     min-width:200px;
+    width:100%;
+    clear:left;
 }
-.larger{
+aside{
+    width:25%;
     min-width:200px;
+    max-width:100%;
 }
+
 ul{
   padding-left:0;  
 }
 
+nav nav ul li, nav nav dl dd{
+    
+}
+/* Shrinkin table header font*/
 thead{
     font-size:90%;
 }
