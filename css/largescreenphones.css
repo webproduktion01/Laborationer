@@ -49,6 +49,9 @@ aside{
 ul{
   padding-left:0;  
 }
+nav nav ul li{
+    margin-top:0.5em;
+}
 
 thead{
     font-size:90%;
