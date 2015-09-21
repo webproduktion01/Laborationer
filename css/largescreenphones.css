@@ -44,12 +44,13 @@ section.large {
 aside{
     width:25%;
     min-width:200px;
+    max-width:100%;
 }
 
 ul{
   padding-left:0;  
 }
-nav nav ul li{
+nav nav ul li, nav nav dl dd{
     margin-top:0.5em;
 }
 
