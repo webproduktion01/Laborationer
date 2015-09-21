@@ -54,7 +54,7 @@ ul{
 nav nav ul li, nav nav dl dd{
     
 }
-
+/* Shrinkin table header font*/
 thead{
     font-size:90%;
 }
