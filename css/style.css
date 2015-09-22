@@ -171,13 +171,9 @@ ul li {
     background-position: 0% 0.1em;
 }
 
-dl {}
-
 dl dt {
     margin: 0.75em 0 0.25em 0;
 }
-
-dl dt dd {}
 
 
 /* Detailed navigation menu behaviour and layout*/
@@ -422,9 +418,14 @@ table {
     border-collapse: collapse;
 }
 
-table thead tr {}
+table thead tr {
+    
 
-table tbody tr td {}
+}
+
+table tbody tr td {
+    
+}
 
 table tbody tr:nth-of-type(10n+1) {
     border-top: 0.0625em;
