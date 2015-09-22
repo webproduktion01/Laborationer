@@ -10,8 +10,12 @@ aside,
 section section,
 .blogg-entry,
 .signatur,
-#contactForm {
+#contactForm{
     border-radius: 1em;
+}
+nav nav dl dd:last-child a{
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
 }
 
 
@@ -238,7 +242,7 @@ nav nav dl dd {
 nav nav ul li a,
 nav nav dl dd a {
     float: left;
-    width: 100%;
+    width:100%;
 }
 
 nav nav ul li a:link,
@@ -479,4 +483,16 @@ table tfoot {
 /* favicon settings */
 #favicon{
    
+}
+/* Local nav needs layout adapted to global nav with sprites*/
+nav nav dl dd a{
+    padding-left: 12%;
+    width: 88%;
+    max-width:88%;
+    min-width:88%;
+}
+/* Added looks for solo-menu to look the same as others as well*/
+#soloMenu ul li:last-child a{
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
 }
