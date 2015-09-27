@@ -415,17 +415,61 @@ table {
     border-style: solid;
     text-align: center;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
+    /* Test */
+    display:block;
+}
+table tr{
+    border-style:solid;
+    border-color:white;
+    border-bottom:0.0625em;
+}
+table tr td{
+    border-style:solid;
+    border-color:white;
+
 }
 
 table thead tr {
-    
+    border-style:solid;
+    border-color:white;
+    border-bottom:0.0625em;
 
 }
 
 table tbody tr td {
+
     
 }
+/* Cells needing expansion*/
+table tbody tr:nth-child(10n+1) td:nth-child(1){
+    background-color:green;
+    overflow-y:visible;
+
+    
+}
+table tbody tr:nth-child(1n+10) td:nth-child(1){
+    overflow-y:visible;
+    background-color:yellow;
+}
+/* Selection of td's that needs not be displayed or height 0% */
+table tbody tr:not(:nth-child(10n+1)) td:nth-child(1){
+    background-color:orange;
+}
+
+/*  displaced cells due to invisible first column cells(if display:none is used 
+    which doesn't work as planned apparently
+*/
+table tbody tr:not(:nth-child(10n+1)) td:nth-child(1n+2){
+    background-color:gray;
+}
+/* first row of non-expandeables */
+table tbody tr:not(:nth-child(10n+1)) td:nth-child(2){
+    background-color:purple;
+}
+
 
 table tbody tr:nth-of-type(10n+1) {
     border-top: 0.0625em;
@@ -436,6 +480,14 @@ table tfoot {
     border-bottom: 0.0625em;
     border-top: 0.0625em;
     border-style: solid;
+}
+table tfoot tr{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+table tfoot tr td{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 

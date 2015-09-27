@@ -18,23 +18,3 @@ main{
 #contactForm{
     min-width:12.5em;
 }
-
-
-/* sprite icons for menu*/
-/*
-#home,
-#exercises,
-#communication,
-#introduction {
-    background-image: none;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    height: 1.5em;
-    width:11em;
-    padding:0;
-}
-
-#exercises,#introduction,#communication,#home:hover,#exercises:hover,#introduction:hover,#communication:hover {
-    background-position: 0;
-}
-*/
