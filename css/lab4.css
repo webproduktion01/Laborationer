@@ -3,3 +3,32 @@ a{
     display:block;
     float:left;
 }
+input,label,#pricemodel{
+    float:left;
+    display:block;
+    width:250px;
+    padding:0;
+    margin:0;
+}
+fieldset{
+    margin-left:0;
+    padding-left:0;
+    border-style:none;
+    border-width:0px;
+}
+#contactForm{
+    margin:auto;
+    width:400px;
+    float:left;
+    padding:0;
+    border-style:none;
+    display:block;
+}
+#button{
+    width:10em;    
+    background-color:orange;
+    border-radius:5px;
+    color:white;
+    border-width:0;
+}
+

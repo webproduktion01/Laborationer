@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Laboration 4.2 - Formulär</title>
+    <link rel="stylesheet" type="text/css" href="../../css/lab4.css" />
+</head>
+
+<body>
+    <div id="contactForm">
+        <h1>Fyll i din betalningsplan</h1>
+        <form action=formulaire.html method="post" id="contact_form">
+            <fieldset>
+                <label for="firstName">Förnamn: </label>
+                <input type="text" name="firstName" id="firstName" value="" />
+                
+                <label for="lastName">Efternamn: </label>
+                <input type="text" name="lastName" id="lastName" value="" />
+                
+                <label for="postnumber">Postnummer: </label>
+                <input type="text" name="postnumber" id="postnumber" value="" />
+                
+                <label for="email">E-post: </label>
+                <input type="text" name="email" id="email" value="" />
+                
+
+                <label for="pricemodel">Prismodell:</label>
+                <select name="pricemodel" form="contact_form" id="pricemodel">
+                    <option value="1">Låg</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Hög</option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Genomför Köp" name="submit_button" id="button" />
+        </form>
+    </div>
+    <script type="text/javascript" src="../../js/formscript.js"></script>
+</body>
+
+</html>
