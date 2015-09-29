@@ -42,3 +42,12 @@ p{
   padding:0;
   color:red;
 }
+.approved{
+    outline-color:green;
+}
+.failed .failed:empty{
+    outline-color:red;
+}
+input:required{
+    outline-color:red;
+}

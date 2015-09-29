@@ -51,15 +51,16 @@ function removeParagraph(input) {
     Adds sibling paragraph element next to suitable input text window
     when user does not enter correct input in it.
 */
-function checkIfTextIsEmpty(objectRef) {
-    if (objectRef.value === null || objectRef.value === "") {
+function checkIfTextIsEmpty(inputField) {
+    if (inputField.value === null || inputField.value === "") {
+        inputField.setAttribute("class","failed");
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Detta fält får ej lämnas blankt"));
-        objectRef.parentElement.appendChild(paragraph);
+        inputField.parentElement.appendChild(paragraph);
     }
     else {
-        objectRef.removeAttribute('style');
+        inputField.setAttribute("class","approved");
     }
 
 }
@@ -74,9 +75,10 @@ function checkIfAnyCorrectHits(inputField) {
     if (regXp.test(inputField.value)) {
         //Removes -|' '|SE from entered text and replaces text in input field.
         inputField.value = regXp.exec(inputField.value)[0].replace(new RegExp('SE|-|\\s', 'g', ''), this);
-        inputField.removeAttribute('style');
+        inputField.setAttribute("class","approved");
     }
     else {
+        inputField.setAttribute("class","failed");
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Sifferkombination: #####"));
@@ -88,13 +90,14 @@ function checkIfAnyCorrectHits(inputField) {
 */
 function checkIfEmailIsCorrect(inputField) {
     //The longest tld are .museum and .travel , infinitly long tld guarantees futureproofing
-    var regXp = new RegExp('\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]+\\b');
+    var regXp = new RegExp('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+\\b');
     console.log(inputField.value);
     console.log(regXp.test('a@a.aaa'));
     if (regXp.test(inputField.value)) {
-        inputField.removeAttribute('style');
+        inputField.setAttribute("class","approved");
     }
     else{
+        inputField.setAttribute("class","failed");
         var paragraph = document.createElement('P');
         paragraph.appendChild(document.createTextNode("Korrekt emailformat är: a@a.aaa"));
         paragraph.setAttribute('class', 'warning');
