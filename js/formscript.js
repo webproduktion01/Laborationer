@@ -1,14 +1,26 @@
 window.onload = function() {
     prepareEventHandlers();
+    var button = document.getElementById('button');
+    button.addEventListener('click', message, true);
+
 };
+
+function message() {
+    alert("Hello!");
+}
 
 
 function prepareEventHandlers() {
-    for (var i = 0; i < document.body.getElementsByTagName('input').length; i++) {
-        //Adds out of focus listener to input texts
-        document.body.getElementsByTagName('input')[i].addEventListener('focusout', checkValidInput(document.body.getElementsByTagName('input')[i]), false);
-        //Adds in focus listener to input texts
-        document.body.getElementsByTagName('input')[i].addEventListener('focusin', removeParagraph(document.body.getElementsByTagName('input')[i]), false);
+    var inputTexts= document.body.getElementsByTagName('input');
+    for (var i = 0; i < inputTexts.length; i++) {
+
+        //Adds out of focus out listener to input texts
+        inputTexts[i].addEventListener('focusout', checkValidInput(inputTexts[i]),true);
+        //Adds in focus in listener to input texts
+        inputTexts[i].addEventListener('focusin', removeParagraph(inputTexts[i]),true);
+        //Test adds focus listener
+        //inputTexts[i].addEventListener('focus', checkValidInput(inputTexts[i]),true);
+
     }
 }
 
@@ -16,38 +28,55 @@ function prepareEventHandlers() {
     Checks text in input field when it goes out of focus
 */
 function checkValidInput(input) {
-    switch (input) {
+    console.log("focus out->id: " + input.getAttribute('id') );
+    switch (input.getAttribute('id')) {
         case "firstName":
+            console.log("focus out->id: " + input.getAttribute('id') );
             checkIfTextIsEmpty(input);
             break;
         case "lastName":
             checkIfTextIsEmpty(input);
             break;
         case "postNumber":
-            checkIfAnyCorrectHits(input)
+            checkIfAnyCorrectHits(input);
             break;
         case "email":
             break;
         default:
+
     }
 }
 /*
-    removes warning each time focus is on input text
+    removes warning text paragraph each time focus is on input text
 */
-function removeParagraph(input){
+function removeParagraph(input) {
+    //console.log("id: " + input.getAttribute('id') + " focusin");
     //TODO
+    //console.log(input.parentElement.lastChild);
+    if(input.parentElement.lastChild.tagName==='P'){
+        input.parentElement.removeChild(input.parentElement.lastChild);
+    }
+        
 }
 
 /*
     Adds sibling paragraph element next to suitable input text window
     when user does not enter correct input in it.
+    
+    TODO -test it
 */
 function checkIfTextIsEmpty(objectRef) {
-    if (objectRef.getAttribute("text") === "") {
+    console.log(objectRef.value);
+    if (objectRef.value === null || objectRef.value==="" ) {
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Detta fält får ej lämnas blankt"));
+        paragraph.setAttribute('style','color:red');
+        objectRef.setAttribute('style' , 'outline-color:empty:red');
         objectRef.parentElement.appendChild(paragraph);
+    }
+    else{
+        objectRef.removeAttribute('style');        
     }
 
 }
@@ -57,12 +86,21 @@ function checkIfTextIsEmpty(objectRef) {
     
     TODO fix \s
 */
-function checkIfAnyCorrectHits(inputField){
+function checkIfAnyCorrectHits(inputField) {
     //RegXp for given pattern
-    var regXp = new RegExp('SE([0-9]{3}(-|\s)[0-9]{2})|([0-9]{3}(-|\s)[0-9]{2})|[0-9]{5}');
-    
-    if(regXp.test(inputField.getAttribute('text'))){
+    var regXp = new RegExp('SE([0-9]{3}(-|\\s)[0-9]{2})|([0-9]{3}(-|\\s)[0-9]{2})|[0-9]{5}');
+
+    if (regXp.test(inputField.value)) {
         //Removes -|' '|SE from entered text and replaces text in input field. see if this works for this
-        inputField.setAttribute('text',regXp.exec(inputField.getAttribute('text')).toString().replace(new RegExp('SE|-|\s','g',''),this));
+        inputField.value=regXp.exec(inputField.value)[0].replace(new RegExp('SE|-|\\s', 'g', ''), this);
+        inputField.removeAttribute('style');
+        
+    }
+    else{
+        var paragraph = document.createElement('P');
+        paragraph.setAttribute('class', 'warning');
+        paragraph.appendChild(document.createTextNode("#####"));
+        paragraph.setAttribute('style','color:red');
+        inputField.parentElement.appendChild(paragraph);
     }
 }

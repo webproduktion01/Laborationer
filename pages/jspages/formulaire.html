@@ -12,25 +12,30 @@
         <h1>Fyll i din betalningsplan</h1>
         <form action=formulaire.html method="post" id="contact_form">
             <fieldset>
+                <div>
                 <label for="firstName">Förnamn: </label>
-                <input type="text" name="firstName" id="firstName" value="" />
-                
+                <input type="text" onfocusout="checkValidInput(this)" onfocusin="removeParagraph(this)" name="firstName" id="firstName" value="" />
+                </div>
+                <div>
                 <label for="lastName">Efternamn: </label>
-                <input type="text" name="lastName" id="lastName" value="" />
-                
-                <label for="postnumber">Postnummer: </label>
-                <input type="text" name="postnumber" id="postnumber" value="" />
-                
+                <input type="text" onfocusout="checkValidInput(this)" onfocusin="removeParagraph(this)" name="lastName" id="lastName" value="" />
+                </div>
+                <div>
+                <label for="postNumber">Postnummer: </label>
+                <input type="text" onfocusout="checkValidInput(this)" onfocusin="removeParagraph(this)" name="postNumber" id="postNumber" value="" />
+                </div>
+                <div>
                 <label for="email">E-post: </label>
-                <input type="text" name="email" id="email" value="" />
-                
-
+                <input type="text" onfocusout="checkValidInput(this)" onfocusin="removeParagraph(this)" name="email" id="email" value="" />
+                </div>
+                <div>
                 <label for="pricemodel">Prismodell:</label>
                 <select name="pricemodel" form="contact_form" id="pricemodel">
                     <option value="1">Låg</option>
                     <option value="2">Medium</option>
                     <option value="3">Hög</option>
                 </select>
+                </div>
             </fieldset>
             <input type="submit" value="Genomför Köp" name="submit_button" id="button" />
         </form>

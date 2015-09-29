@@ -33,8 +33,8 @@
             toBeWritten += "<tbody>\n";
             //skippar som sagt första raden här
             for (i = 1; i < twoDimensionalTableArray.length; i++) {
-                //varannan rad skulle ha annorlunda färg. table-header räcknas ej
-                if (i % 2 == 0) {
+                //varannan rad skulle ha annorlunda färg. table headern skulle räknas tydligen
+                if ((i+1) % 2 == 0) {
                     toBeWritten += "<tr bgcolor='green' >\n";
                 }
                 else {
