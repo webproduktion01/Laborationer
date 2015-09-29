@@ -44,9 +44,6 @@ function checkValidInput(input) {
     removes warning text paragraph each time focus is on input text
 */
 function removeParagraph(input) {
-    //console.log("id: " + input.getAttribute('id') + " focusin");
-    //TODO
-    //console.log(input.parentElement.lastChild);
     if(input.parentElement.lastChild.tagName==='P'){
         input.parentElement.removeChild(input.parentElement.lastChild);
     }
