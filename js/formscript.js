@@ -81,7 +81,7 @@ function checkIfTextIsEmpty(objectRef) {
 */
 function checkIfAnyCorrectHits(inputField) {
     //RegXp for given pattern
-    var regXp = new RegExp('SE([0-9]{3}(-|\\s)[0-9]{2})|([0-9]{3}(-|\\s)[0-9]{2})|[0-9]{5}');
+    var regXp = new RegExp('SE(\\s)([0-9]{3}(-|\\s)[0-9]{2})|SE([0-9]{3}(-|\\s)[0-9]{2})|([0-9]{3}(-|\\s)[0-9]{2})|[0-9]{5}');
 
     if (regXp.test(inputField.value)) {
         //Removes -|' '|SE from entered text and replaces text in input field. see if this works for this
