@@ -20,10 +20,9 @@ function prepareEventHandlers() {
     Checks text in input field when it goes out of focus
 */
 function checkValidInput(input) {
-    console.log("focus out->id: " + input.getAttribute('id'));
+    //console.log("focus out->id: " + input.getAttribute('id'));
     switch (input.getAttribute('id')) {
         case "firstName":
-            console.log("focus out->id: " + input.getAttribute('id'));
             checkIfTextIsEmpty(input);
             break;
         case "lastName":
@@ -53,7 +52,6 @@ function removeParagraph(input) {
     when user does not enter correct input in it.
 */
 function checkIfTextIsEmpty(objectRef) {
-    console.log(objectRef.value);
     if (objectRef.value === null || objectRef.value === "") {
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
@@ -76,9 +74,8 @@ function checkIfAnyCorrectHits(inputField) {
     var regXp = new RegExp('\\b(SE(\\s)([0-9]{3}(-|\\s)[0-9]{2})|SE([0-9]{3}(-|\\s)[0-9]{2})|([0-9]{3}(-|\\s)[0-9]{2})|[0-9]{5})\\b');
 
     if (regXp.test(inputField.value)) {
-        //Removes -|' '|SE from entered text and replaces text in input field. see if this works for this
+        //Removes -|' '|SE from entered text and replaces text in input field.
         inputField.value = regXp.exec(inputField.value)[0].replace(new RegExp('SE|-|\\s', 'g', ''), this);
-        inputField.removeAttribute('class');
         inputField.removeAttribute('style');
     }
     else {
@@ -93,16 +90,17 @@ function checkIfAnyCorrectHits(inputField) {
     Checks if email is correct, gives a warning otherwise
 */
 function checkIfEmailIsCorrect(inputField) {
-    var regXp = new RegExp('\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b');
+    //The longest tld are .museum and .travel , infinitly long tld guarantees futureproofing
+    var regXp = new RegExp('\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]+\\b');
+    console.log(inputField.value);
+    console.log(regXp.test('a@a.aaa'));
     if (regXp.test(inputField.value)) {
         inputField.removeAttribute('style');
-        inputField.removeAttribute('class');
     }
     else{
         var paragraph = document.createElement('P');
-        //Haven't decided to do anything particular with the added class yet. Gonna revamp code as soon as it works
-        paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Korrekt emailformat är: a@a.aaa"));
+        paragraph.setAttribute('class', 'warning');
         paragraph.setAttribute('style', 'color:red');
         inputField.parentElement.appendChild(paragraph);
     }
