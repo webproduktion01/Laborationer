@@ -1,13 +1,7 @@
 window.onload = function() {
     prepareEventHandlers();
-    var button = document.getElementById('button');
-    button.addEventListener('click', message, true);
 
 };
-
-function message() {
-    alert("Hello!");
-}
 
 
 function prepareEventHandlers() {
@@ -84,7 +78,6 @@ function checkIfTextIsEmpty(objectRef) {
     Checks if text entry is viable, if viable 
     converts string to absolute format
     
-    TODO fix \s
 */
 function checkIfAnyCorrectHits(inputField) {
     //RegXp for given pattern
@@ -99,7 +92,7 @@ function checkIfAnyCorrectHits(inputField) {
     else{
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
-        paragraph.appendChild(document.createTextNode("#####"));
+        paragraph.appendChild(document.createTextNode("Sifferkombination: #####"));
         paragraph.setAttribute('style','color:red');
         inputField.parentElement.appendChild(paragraph);
     }
