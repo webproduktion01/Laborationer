@@ -56,8 +56,6 @@ function checkIfTextIsEmpty(objectRef) {
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Detta fält får ej lämnas blankt"));
-        paragraph.setAttribute('style', 'color:red');
-        objectRef.setAttribute('style', 'outline-color:empty:red');
         objectRef.parentElement.appendChild(paragraph);
     }
     else {
@@ -82,7 +80,6 @@ function checkIfAnyCorrectHits(inputField) {
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Sifferkombination: #####"));
-        paragraph.setAttribute('style', 'color:red');
         inputField.parentElement.appendChild(paragraph);
     }
 }
@@ -101,7 +98,6 @@ function checkIfEmailIsCorrect(inputField) {
         var paragraph = document.createElement('P');
         paragraph.appendChild(document.createTextNode("Korrekt emailformat är: a@a.aaa"));
         paragraph.setAttribute('class', 'warning');
-        paragraph.setAttribute('style', 'color:red');
         inputField.parentElement.appendChild(paragraph);
     }
 }
