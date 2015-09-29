@@ -53,14 +53,16 @@ function removeParagraph(input) {
 */
 function checkIfTextIsEmpty(inputField) {
     if (inputField.value === null || inputField.value === "") {
-        inputField.setAttribute("class","failed");
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Detta fält får ej lämnas blankt"));
         inputField.parentElement.appendChild(paragraph);
+        inputField.removeAttribute('valid','');
+        inputField.setAttribute('invalid','');
     }
     else {
-        inputField.setAttribute("class","approved");
+        inputField.removeAttribute('invalid','');
+        inputField.setAttribute('valid','');
     }
 
 }
@@ -75,14 +77,16 @@ function checkIfAnyCorrectHits(inputField) {
     if (regXp.test(inputField.value)) {
         //Removes -|' '|SE from entered text and replaces text in input field.
         inputField.value = regXp.exec(inputField.value)[0].replace(new RegExp('SE|-|\\s', 'g', ''), this);
-        inputField.setAttribute("class","approved");
+        inputField.removeAttribute('invalid', '');
+        inputField.setAttribute('valid', '');
     }
     else {
-        inputField.setAttribute("class","failed");
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Sifferkombination: #####"));
         inputField.parentElement.appendChild(paragraph);
+        inputField.removeAttribute('valid', '');
+        inputField.setAttribute('invalid', '');
     }
 }
 /*
@@ -91,16 +95,16 @@ function checkIfAnyCorrectHits(inputField) {
 function checkIfEmailIsCorrect(inputField) {
     //The longest tld are .museum and .travel , infinitly long tld guarantees futureproofing
     var regXp = new RegExp('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+\\b');
-    console.log(inputField.value);
-    console.log(regXp.test('a@a.aaa'));
     if (regXp.test(inputField.value)) {
-        inputField.setAttribute("class","approved");
+        inputField.removeAttribute('invalid','');
+        inputField.setAttribute('valid','');
     }
-    else{
-        inputField.setAttribute("class","failed");
+    else {
         var paragraph = document.createElement('P');
         paragraph.appendChild(document.createTextNode("Korrekt emailformat är: a@a.aaa"));
         paragraph.setAttribute('class', 'warning');
         inputField.parentElement.appendChild(paragraph);
+        inputField.removeAttribute('valid', '');
+        inputField.setAttribute('invalid', '');
     }
 }

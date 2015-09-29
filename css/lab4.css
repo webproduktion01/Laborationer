@@ -42,12 +42,16 @@ p{
   padding:0;
   color:red;
 }
-.approved{
+input:valid{
     outline-color:green;
 }
-.failed .failed:empty{
+input:invalid{
     outline-color:red;
+    background-color:red;
 }
-input:required{
-    outline-color:red;
+form:valid{
+    
+}
+form:invalid{
+    
 }
