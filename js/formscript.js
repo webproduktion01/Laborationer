@@ -57,12 +57,12 @@ function checkIfTextIsEmpty(inputField) {
         paragraph.setAttribute('class', 'warning');
         paragraph.appendChild(document.createTextNode("Detta fält får ej lämnas blankt"));
         inputField.parentElement.appendChild(paragraph);
-        inputField.removeAttribute('valid','');
-        inputField.setAttribute('invalid','');
+        inputField.removeAttribute('valid', '');
+        inputField.setAttribute('invalid', '');
     }
     else {
-        inputField.removeAttribute('invalid','');
-        inputField.setAttribute('valid','');
+        inputField.removeAttribute('invalid', '');
+        inputField.setAttribute('valid', '');
     }
 
 }
@@ -95,9 +95,10 @@ function checkIfAnyCorrectHits(inputField) {
 function checkIfEmailIsCorrect(inputField) {
     //The longest tld are .museum and .travel , infinitly long tld guarantees futureproofing
     var regXp = new RegExp('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+\\b');
+
     if (regXp.test(inputField.value)) {
-        inputField.removeAttribute('invalid','');
-        inputField.setAttribute('valid','');
+        inputField.removeAttribute('invalid', '');
+        inputField.setAttribute('valid', '');
     }
     else {
         var paragraph = document.createElement('P');

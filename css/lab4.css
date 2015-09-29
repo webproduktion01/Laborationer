@@ -50,8 +50,15 @@ input:invalid{
     background-color:red;
 }
 form:valid{
-    
+    background-color:green;
 }
 form:invalid{
-    
+    background-color:red;
+}
+:-moz-placeholder {
+	color: blue;
+}
+
+::-webkit-input-placeholder {
+	color: blue;
 }
