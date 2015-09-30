@@ -1,38 +1,25 @@
 window.onload = function() {
-    prepareEventHandlers();
+    eventHandlers();
+    
 };
-
-
-function prepareEventHandlers() {
-    var inputTexts = document.body.getElementsByTagName('input');
-    for (var i = 0; i < inputTexts.length; i++) {
-
-        //Adds out of focus out listener to input texts
-        inputTexts[i].addEventListener('focusout', checkValidInput(inputTexts[i]), true);
-        //Adds in focus in listener to input texts
-        inputTexts[i].addEventListener('focusin', removeParagraph(inputTexts[i]), true);
-        //Test add focus listener
-        //inputTexts[i].addEventListener('focus', checkValidInput(inputTexts[i]),true);
-    }
-}
 
 /*
     Checks text in input field when it goes out of focus
 */
-function checkValidInput(input) {
-    //console.log("focus out->id: " + input.getAttribute('id'));
-    switch (input.getAttribute('id')) {
+function checkValidInput() {
+    console.log(this.getAttribute('id')+" is out of focus!");
+    switch (this.getAttribute('id')) {
         case "firstName":
-            checkIfTextIsEmpty(input);
+            checkNameConstraint(this);
             break;
         case "lastName":
-            checkIfTextIsEmpty(input);
+            checkNameConstraint(this);
             break;
         case "postNumber":
-            checkIfAnyCorrectHits(input);
+            checkPostNumberConstraintAndAdapt(this);
             break;
         case "email":
-            checkIfEmailIsCorrect(input);
+            checkEmailConstraint(this);
             break;
         default:
 
@@ -41,9 +28,10 @@ function checkValidInput(input) {
 /*
     removes warning text paragraph each time focus is on input text
 */
-function removeParagraph(input) {
-    if (input.parentElement.lastChild.tagName === 'P') {
-        input.parentElement.removeChild(input.parentElement.lastChild);
+function removeParagraph() {
+    console.log(this.id+" is in focus!");
+    if (this.parentElement.lastChild.tagName === 'P') {
+        this.parentElement.removeChild(this.parentElement.lastChild);
     }
 }
 
@@ -51,7 +39,7 @@ function removeParagraph(input) {
     Adds sibling paragraph element next to suitable input text window
     when user does not enter correct input in it.
 */
-function checkIfTextIsEmpty(inputField) {
+function checkNameConstraint(inputField) {
     if (inputField.value === null || inputField.value === "") {
         var paragraph = document.createElement('P');
         paragraph.setAttribute('class', 'warning');
@@ -70,7 +58,7 @@ function checkIfTextIsEmpty(inputField) {
     Checks if text entry is viable, if viable 
     converts string to absolute format
 */
-function checkIfAnyCorrectHits(inputField) {
+function checkPostNumberConstraintAndAdapt(inputField) {
     //RegXp for given pattern
     var regXp = new RegExp('\\b(SE(\\s)([0-9]{3}(-|\\s)[0-9]{2})|SE([0-9]{3}(-|\\s)[0-9]{2})|([0-9]{3}(-|\\s)[0-9]{2})|[0-9]{5})\\b');
 
@@ -92,7 +80,7 @@ function checkIfAnyCorrectHits(inputField) {
 /*
     Checks if email is correct, gives a warning otherwise
 */
-function checkIfEmailIsCorrect(inputField) {
+function checkEmailConstraint(inputField) {
     //The longest tld are .museum and .travel , infinitly long tld guarantees futureproofing
     var regXp = new RegExp('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+\\b');
 
@@ -109,3 +97,23 @@ function checkIfEmailIsCorrect(inputField) {
         inputField.setAttribute('invalid', '');
     }
 }
+
+
+var eventHandlers = function prepareEventHandlers() {
+    var inputTexts = document.body.getElementsByTagName('INPUT');
+    
+    for (var i = 0; i < inputTexts.length; i++) {
+
+        //Adds out of focus out listener to input texts
+        console.log(document.getElementById(inputTexts.item(i).id));
+        document.getElementById(inputTexts.item(i).id).addEventListener('onblur', checkValidInput, true);
+        document.getElementById(inputTexts.item(i).id).addEventListener('focusout', checkValidInput, true);
+        //Adds in focus in listener to input texts
+        document.getElementById(inputTexts.item(i).id).addEventListener('onfocus', removeParagraph, true);
+        document.getElementById(inputTexts.item(i).id).addEventListener('focusin', removeParagraph, true);
+        console.log(document.getElementById(inputTexts.item(i).id).id+" has listeners attached");
+        console.log("DOM node: "+inputTexts.item(i));
+        //Test add focus listener
+        //inputTexts[i].addEventListener('focus', checkValidInput(inputTexts[i]),true);
+    }
+};

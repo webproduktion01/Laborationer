@@ -10,27 +10,23 @@
 <body>
     <div id="contactForm">
         <h1>Fyll i din betalningsplan</h1>
-        <form action=checkValidity() method="post" id="contact_form">
+        <form action="displayVerify(this)" method="post" id="contact_form">
             <fieldset>
                 <div>
                     <label for="firstName">Förnamn: </label>
                     <input type="text" name="firstName" id="firstName" required/>
-                    <span class=warning>Detta fält får ej lämnas blankt</span>
                 </div>
                 <div>
                     <label for="lastName">Efternamn: </label>
                     <input type="text"  name="lastName" id="lastName" required />
-                    <span class=warning>Detta fält får ej lämnas blankt></span>
                 </div>
                 <div>
                     <label for="postNumber">Postnummer: </label>
                     <input type="text" pattern="\b(SE(\s)([0-9]{3}(-|\s)[0-9]{2})|SE([0-9]{3}(-|\s)[0-9]{2})|([0-9]{3}(-|\s)[0-9]{2})|[0-9]{5})\b" name="postNumber" id="postNumber" required />
-                    <span class=warning>Sifferkombination: #####</span>
                 </div>
                 <div>
                     <label for="email">E-post: </label>
                     <input type="email" pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\b" name="email" id="email" required />
-                    <span class="warning">Korrekt emailformat är: a@a.aaa</span>
                 </div>
                 <div>
                     <label for="pricemodel">Prismodell:</label>
@@ -44,7 +40,7 @@
             <input type="submit" value="Genomför Köp" name="submit_button" id="button" />
         </form>
     </div>
-    <!--<script type="text/javascript" src="../../js/formscript.js"></script> -->
+    <script type="text/javascript" src="../../js/formscript.js"></script>
 </body>
 
 </html>

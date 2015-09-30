@@ -42,22 +42,19 @@ div{
 .warning{
   margin:0;  
   padding:0;
-  color:red;
-  display:none;
+  color:white;
 }
 input:valid{
     outline-color:green;
 }
 input:invalid{
     outline-color:red;
-    
 }
+
 form:valid{
     background-color:green;
 }
-form:invalid > span{
-    display:block;
-}
+
 form:invalid{
     background-color:red;
 }
