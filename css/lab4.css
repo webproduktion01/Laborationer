@@ -30,6 +30,8 @@ fieldset{
     border-radius:5px;
     color:white;
     border-width:0;
+    padding:0.2em;
+    margin-top:0.2em;
 }
 div{
     float:left;
@@ -37,22 +39,32 @@ div{
     padding:0;
     margin:0;
 }
-p{
+.warning{
   margin:0;  
   padding:0;
   color:red;
+  display:none;
 }
 input:valid{
     outline-color:green;
 }
 input:invalid{
     outline-color:red;
-    background-color:red;
+    
 }
 form:valid{
     background-color:green;
 }
+form:invalid > span{
+    display:block;
+}
 form:invalid{
+    background-color:red;
+}
+input:focus:valid{
+    background-color:green;
+}
+input:focus:invalid{
     background-color:red;
 }
 :-moz-placeholder {
