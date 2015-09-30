@@ -71,3 +71,9 @@ input:focus:invalid{
 ::-webkit-input-placeholder {
 	color: blue;
 }
+#confirm{
+    display:block;
+    position:absolute;
+    margin:0;
+    width:400px;
+}

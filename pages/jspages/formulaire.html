@@ -10,7 +10,7 @@
 <body>
     <div id="contactForm">
         <h1>Fyll i din betalningsplan</h1>
-        <form action="displayVerify(this)" method="post" id="contact_form">
+        <form action=# onsubmit="return displayVerify(this)"method="post" id="contact_form">
             <fieldset>
                 <div>
                     <label for="firstName">Förnamn: </label>
@@ -37,7 +37,7 @@
                     </select>
                 </div>
             </fieldset>
-            <input type="submit" value="Genomför Köp" name="submit_button" id="button" />
+            <input type="submit" formaction=#contactForm value="Genomför Köp" name="submit_button" id="button" />
         </form>
     </div>
     <script type="text/javascript" src="../../js/formscript.js"></script>

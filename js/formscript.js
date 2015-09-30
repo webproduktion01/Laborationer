@@ -1,13 +1,13 @@
 window.onload = function() {
     eventHandlers();
-    
+
 };
 
 /*
     Checks text in input field when it goes out of focus
 */
 function checkValidInput() {
-    console.log(this.getAttribute('id')+" is out of focus!");
+    //console.log(this.getAttribute('id')+" is out of focus!");
     switch (this.getAttribute('id')) {
         case "firstName":
             checkNameConstraint(this);
@@ -25,15 +25,6 @@ function checkValidInput() {
 
     }
 }
-/*
-    removes warning text paragraph each time focus is on input text
-*/
-function removeParagraph() {
-    console.log(this.id+" is in focus!");
-    if (this.parentElement.lastChild.tagName === 'P') {
-        this.parentElement.removeChild(this.parentElement.lastChild);
-    }
-}
 
 /*
     Adds sibling paragraph element next to suitable input text window
@@ -41,16 +32,10 @@ function removeParagraph() {
 */
 function checkNameConstraint(inputField) {
     if (inputField.value === null || inputField.value === "") {
-        var paragraph = document.createElement('P');
-        paragraph.setAttribute('class', 'warning');
-        paragraph.appendChild(document.createTextNode("Detta fält får ej lämnas blankt"));
-        inputField.parentElement.appendChild(paragraph);
-        inputField.removeAttribute('valid', '');
-        inputField.setAttribute('invalid', '');
+        addWarningText(inputField, "Detta fält får ej lämnas blankt");
     }
     else {
-        inputField.removeAttribute('invalid', '');
-        inputField.setAttribute('valid', '');
+        removeWarningText(inputField);
     }
 
 }
@@ -65,55 +50,85 @@ function checkPostNumberConstraintAndAdapt(inputField) {
     if (regXp.test(inputField.value)) {
         //Removes -|' '|SE from entered text and replaces text in input field.
         inputField.value = regXp.exec(inputField.value)[0].replace(new RegExp('SE|-|\\s', 'g', ''), this);
-        inputField.removeAttribute('invalid', '');
-        inputField.setAttribute('valid', '');
+        removeWarningText(inputField);
     }
     else {
-        var paragraph = document.createElement('P');
-        paragraph.setAttribute('class', 'warning');
-        paragraph.appendChild(document.createTextNode("Sifferkombination: #####"));
-        inputField.parentElement.appendChild(paragraph);
-        inputField.removeAttribute('valid', '');
-        inputField.setAttribute('invalid', '');
+        addWarningText(inputField, "Sifferkombination: #####");
     }
 }
 /*
     Checks if email is correct, gives a warning otherwise
 */
 function checkEmailConstraint(inputField) {
-    //The longest tld are .museum and .travel , infinitly long tld guarantees futureproofing
+    //The longest tld are .museum and .travel , "infinitely" long tld guarantees futureproofing
     var regXp = new RegExp('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+\\b');
 
     if (regXp.test(inputField.value)) {
-        inputField.removeAttribute('invalid', '');
-        inputField.setAttribute('valid', '');
+        removeWarningText(inputField);
     }
     else {
-        var paragraph = document.createElement('P');
-        paragraph.appendChild(document.createTextNode("Korrekt emailformat är: a@a.aaa"));
-        paragraph.setAttribute('class', 'warning');
-        inputField.parentElement.appendChild(paragraph);
-        inputField.removeAttribute('valid', '');
-        inputField.setAttribute('invalid', '');
+        addWarningText(inputField, "Korrekt emailformat är: a@a.aaa");
     }
+}
+/*
+    Adds warning text(paragraph) next to input text element
+*/
+function addWarningText(element, text) {
+    if (element.parentElement.lastChild.tagName != 'P'){
+    var paragraph = document.createElement('P');
+    paragraph.appendChild(document.createTextNode(text));
+    paragraph.setAttribute('class', 'warning');
+    element.parentElement.appendChild(paragraph);
+        if (element.hasAttribute('valid')) {
+            element.removeAttribute('valid', '');
+            element.setAttribute('invalid', '');
+        }
+    }
+}
+
+/*
+    removes warning text(paragraph) next to input text element
+*/
+function removeWarningText(element) {
+    element.removeAttribute('invalid', '');
+    element.setAttribute('valid', '');
+    if (element.parentElement.lastChild.tagName === 'P') {
+        element.parentElement.removeChild(element.parentElement.lastChild);
+    }
+
 }
 
 
 var eventHandlers = function prepareEventHandlers() {
     var inputTexts = document.body.getElementsByTagName('INPUT');
-    
     for (var i = 0; i < inputTexts.length; i++) {
-
-        //Adds out of focus out listener to input texts
-        console.log(document.getElementById(inputTexts.item(i).id));
+        //Adds out of focus out listener to input texts ,havent decided or checked which to use yet
+        //console.log(document.getElementById(inputTexts.item(i).id));
         document.getElementById(inputTexts.item(i).id).addEventListener('onblur', checkValidInput, true);
         document.getElementById(inputTexts.item(i).id).addEventListener('focusout', checkValidInput, true);
-        //Adds in focus in listener to input texts
-        document.getElementById(inputTexts.item(i).id).addEventListener('onfocus', removeParagraph, true);
-        document.getElementById(inputTexts.item(i).id).addEventListener('focusin', removeParagraph, true);
-        console.log(document.getElementById(inputTexts.item(i).id).id+" has listeners attached");
-        console.log("DOM node: "+inputTexts.item(i));
-        //Test add focus listener
-        //inputTexts[i].addEventListener('focus', checkValidInput(inputTexts[i]),true);
+        //Adds in focus in listener to input texts, havent decided or checked which to use yet
+        document.getElementById(inputTexts.item(i).id).addEventListener('onfocus', checkValidInput, true);
+        document.getElementById(inputTexts.item(i).id).addEventListener('focusin', checkValidInput, true);
+        //console.log(document.getElementById(inputTexts.item(i).id).id+" has listeners attached");
+        //console.log("DOM node: "+inputTexts.item(i));
     }
 };
+
+function displayVerify() {
+    if (this.isValid) {
+        console.log("hit");
+        var div = document.createElement('div');
+        for (var i = 0; i < document.getElementsByTagName['INPUT'].length; i++) {
+            var p = document.createElement("P");
+            p.appendChild(document.createTextNode(document.getElementsByTagName['LABEL'].value) + ":");
+            p.appendChild(document.createTextNode(document.getElementsByTagName['INPUT'].value));
+        }
+        div.setAttribute('id', 'confirm');
+        this.parentElement.parentElement.appendChild(div);
+        return false;
+    }
+    else {
+        console.log("Miss");
+        return false;
+    }
+}
