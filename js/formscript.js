@@ -138,16 +138,28 @@ function displayVerify(form) {
             div.appendChild(cDiv);
         }
         //Adding annoying unique content to popup div
+        //Adding confirm button
         var buttonName = div.lastChild.removeChild(div.lastChild.lastChild).textContent;
-        var button = document.createElement('INPUT');
-        button.setAttribute('type','submit');
-        button.setAttribute('name','submit_button');
-        button.setAttribute('id','button');
+        var okButton = document.createElement('INPUT');
+        okButton.setAttribute('type','submit');
+        okButton.setAttribute('name','confirm_button');
+        okButton.setAttribute('class','button');
+        okButton.setAttribute('id','okbutton');
         //Post on submit, not do this function agaaain
-        //button.setAttribute('onsubmit','return displayverify(this)');
+        okButton.setAttribute('onsubmit','formulairePost.html');
         //Muyo importante to associate input button with the form
-        button.setAttribute('form','contact_form');
-        button.value = buttonName;
+        okButton.setAttribute('form','contact_form');
+        okButton.value = buttonName;
+        //Adding cancel button
+        var cancelButton = document.createElement('INPUT');
+        cancelButton.setAttribute('type','button');
+        cancelButton.setAttribute('name','cancel_button');
+        cancelButton.setAttribute('id','cancelButton');
+        cancelButton.setAttribute('class','button');
+        //cancelButton.setAttribute('form','contact_form');
+        cancelButton.setAttribute('onclick','return removePopup(this)');
+        cancelButton.value='Avbryt köp';
+        
         var soloDiv=document.createElement('DIV');
         var select=leContainerForm.getElementsByTagName('SELECT')[0];
         var soloP = document.createElement('P');
@@ -155,15 +167,33 @@ function displayVerify(form) {
         soloDiv.appendChild(soloP);
         div.appendChild(soloDiv);
         var buttonDiv = document.createElement('DIV');
-        buttonDiv.appendChild(button);
+        buttonDiv.appendChild(cancelButton);
+        buttonDiv.appendChild(okButton);
         div.appendChild(buttonDiv);
-        document.body.appendChild(div);
-        leContainerForm.setAttribute('id','contactForm_faded');
+        //Parent div contains both popup div and original form containing div
+        var parentDiv = document.getElementById("containerDiv");
+        parentDiv.appendChild(div);
+        //Adds class faded to original containerform to fade it out
+        leContainerForm.setAttribute('class',leContainerForm.getAttribute('class')+" "+"faded");
         return false;
     }
     else {
         console.log("Miss");
-        leContainerForm.setAttribute('id','contactForm');
+        var classes = leContainerForm.getAttribute('class');
+        classes.replace('faded','');
         return false;
     }
+}
+
+function removePopup(element){
+    console.log("True hit")
+    //Removes popup
+    var div = document.getElementById('confirm');
+    var containerDiv =document.getElementById("containerDiv")
+    containerDiv.removeChild(div);
+    //Fades in original div with contents(form etc)
+    var originalDiv = document.getElementById("contactForm");
+    var classes = originalDiv.getAttribute('class');
+    originalDiv.setAttribute('class',classes.replace('faded',''));
+    return false;
 }

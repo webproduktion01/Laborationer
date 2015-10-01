@@ -24,16 +24,13 @@ fieldset{
     border-style:none;
     display:block;
 }
-#contactForm_faded{
-    margin:auto;
-    width:400px;
-    float:left;
-    padding:0;
-    border-style:none;
-    display:block;
+.faded{
     opacity:0.5;
 }
 #button{
+    background-color:orange;
+}
+.button{
     width:10em;    
     background-color:orange;
     border-radius:5px;
@@ -42,6 +39,7 @@ fieldset{
     padding:0.2em;
     margin-top:0.2em;
 }
+
 div{
     float:left;
     display:block;
