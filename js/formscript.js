@@ -104,10 +104,10 @@ var eventHandlers = function prepareEventHandlers() {
     for (var i = 0; i < inputTexts.length; i++) {
         //Adds out of focus out listener to input texts ,havent decided or checked which to use yet
         //console.log(document.getElementById(inputTexts.item(i).id));
-        document.getElementById(inputTexts.item(i).id).addEventListener('onblur', checkValidInput, true);
+        document.getElementById(inputTexts.item(i).id).addEventListener('blur', checkValidInput, true);
         document.getElementById(inputTexts.item(i).id).addEventListener('focusout', checkValidInput, true);
         //Adds in focus in listener to input texts, havent decided or checked which to use yet
-        document.getElementById(inputTexts.item(i).id).addEventListener('onfocus', checkValidInput, true);
+        document.getElementById(inputTexts.item(i).id).addEventListener('focus', checkValidInput, true);
         document.getElementById(inputTexts.item(i).id).addEventListener('focusin', checkValidInput, true);
         //console.log(document.getElementById(inputTexts.item(i).id).id+" has listeners attached");
         //console.log("DOM node: "+inputTexts.item(i));
@@ -175,6 +175,7 @@ function displayVerify(form) {
         parentDiv.appendChild(div);
         //Adds class faded to original containerform to fade it out
         leContainerForm.setAttribute('class',leContainerForm.getAttribute('class')+" "+"faded");
+        document.getElementById('contact_form').removeAttribute("onSubmit");
         return false;
     }
     else {
@@ -195,5 +196,6 @@ function removePopup(element){
     var originalDiv = document.getElementById("contactForm");
     var classes = originalDiv.getAttribute('class');
     originalDiv.setAttribute('class',classes.replace('faded',''));
+    document.getElementById('contact_form').setAttribute('onsubmit','return displayVerify(this)');
     return false;
 }

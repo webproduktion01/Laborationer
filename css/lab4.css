@@ -53,11 +53,12 @@ div{
 }
 input:valid{
     outline-color:green;
+    
 }
 input:invalid{
     outline-color:red;
+    
 }
-
 form:valid{
     background-color:green;
 }
@@ -65,12 +66,28 @@ form:valid{
 form:invalid{
     background-color:red;
 }
-input:focus:valid{
-    background-color:green;
-}
-input:focus:invalid{
+
+input:blur:invalid{
     background-color:red;
 }
+input:focus:valid{
+    background-color:orange;
+}
+input:focusout{
+    background-color:yellow;
+}
+input:focusin{
+    background-color:yellow;
+}
+input:onfocusout{
+    background-color:orange;
+}
+input:onfocusin{
+    background-color:orange;
+}
+
+
+
 :-moz-placeholder {
 	color: blue;
 }
