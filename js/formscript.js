@@ -114,21 +114,56 @@ var eventHandlers = function prepareEventHandlers() {
     }
 };
 
-function displayVerify() {
-    if (this.isValid) {
+function displayVerify(form) {
+    var leContainerForm = document.getElementById("contactForm");
+    //checks to see if whole form is correctly filled in
+    if (form.checkValidity()) {
         console.log("hit");
-        var div = document.createElement('div');
-        for (var i = 0; i < document.getElementsByTagName['INPUT'].length; i++) {
-            var p = document.createElement("P");
-            p.appendChild(document.createTextNode(document.getElementsByTagName['LABEL'].value) + ":");
-            p.appendChild(document.createTextNode(document.getElementsByTagName['INPUT'].value));
-        }
+        //Creating popup div
+        var div = document.createElement('DIV');
         div.setAttribute('id', 'confirm');
-        this.parentElement.parentElement.appendChild(div);
+        //Getting references to text and data needed to populate it
+        var inputs=leContainerForm.getElementsByTagName('INPUT');
+        var labels=leContainerForm.getElementsByTagName('LABEL');
+        //Creating contents of the popup div
+        for(var i=0;i<labels.length;i++){
+            console.log(labels.length);
+            var cDiv=document.createElement('DIV');
+            var desc=document.createElement('H4');
+            desc.appendChild(document.createTextNode(labels[i].textContent));
+            cDiv.appendChild(desc);
+            var para = document.createElement('P');
+            para.appendChild(document.createTextNode(inputs[i].value));
+            cDiv.appendChild(para);
+            div.appendChild(cDiv);
+        }
+        //Adding annoying unique content to popup div
+        var buttonName = div.lastChild.removeChild(div.lastChild.lastChild).textContent;
+        var button = document.createElement('INPUT');
+        button.setAttribute('type','submit');
+        button.setAttribute('name','submit_button');
+        button.setAttribute('id','button');
+        //Post on submit, not do this function agaaain
+        //button.setAttribute('onsubmit','return displayverify(this)');
+        //Muyo importante to associate input button with the form
+        button.setAttribute('form','contact_form');
+        button.value = buttonName;
+        var soloDiv=document.createElement('DIV');
+        var select=leContainerForm.getElementsByTagName('SELECT')[0];
+        var soloP = document.createElement('P');
+        soloP.appendChild(document.createTextNode(select.options[select.selectedIndex].text));
+        soloDiv.appendChild(soloP);
+        div.appendChild(soloDiv);
+        var buttonDiv = document.createElement('DIV');
+        buttonDiv.appendChild(button);
+        div.appendChild(buttonDiv);
+        document.body.appendChild(div);
+        leContainerForm.setAttribute('id','contactForm_faded');
         return false;
     }
     else {
         console.log("Miss");
+        leContainerForm.setAttribute('id','contactForm');
         return false;
     }
 }

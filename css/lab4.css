@@ -24,6 +24,15 @@ fieldset{
     border-style:none;
     display:block;
 }
+#contactForm_faded{
+    margin:auto;
+    width:400px;
+    float:left;
+    padding:0;
+    border-style:none;
+    display:block;
+    opacity:0.5;
+}
 #button{
     width:10em;    
     background-color:orange;
@@ -76,4 +85,23 @@ input:focus:invalid{
     position:absolute;
     margin:0;
     width:400px;
+    z-index:100;
+    top:33%;
+    left:33%;
+    border-style:solid;
+    border-color:black;
+    border-width:2px;
+    background-color:white;
 }
+#confirm div{
+    float:left;
+    clear:both;
+    margin:0;
+}
+#confirm div p{
+    margin:0;
+}
+#confirm div h4{
+    margin:0;
+}
+
