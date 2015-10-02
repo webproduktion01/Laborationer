@@ -68,25 +68,6 @@ input:invalid{
     
 }
 
-input:blur:invalid{
-    background-color:red;
-}
-input:focus:valid{
-    background-color:orange;
-}
-input:focusout{
-    background-color:yellow;
-}
-input:focusin{
-    background-color:yellow;
-}
-input:onfocusout{
-    
-}
-input:onfocusin{
-    
-}
-
 
 
 :-moz-placeholder {
