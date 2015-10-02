@@ -49,7 +49,7 @@ function checkValidInput() {
     when user does not enter correct input in it.
 */
 function checkNameConstraint(inputField) {
-    console.log("Name check is :"+(inputField.value === null || inputField.value === ""));
+    console.log("Name check is :" + (inputField.value === null || inputField.value === ""));
     if (inputField.value === null || inputField.value === "") {
         addWarningText(inputField, "Detta fält får ej lämnas blankt");
     }
@@ -65,7 +65,7 @@ function checkNameConstraint(inputField) {
 function checkPostNumberConstraintAndAdapt(inputField) {
     //RegXp for given pattern
     var regXp = new RegExp('\\b(SE(\\s)([0-9]{3}(-|\\s)[0-9]{2})|SE([0-9]{3}(-|\\s)[0-9]{2})|([0-9]{3}(-|\\s)[0-9]{2})|[0-9]{5})\\b');
-    console.log("Postnr check is :"+regXp.test(inputField));
+    console.log("Postnr check is :" + regXp.test(inputField));
     if (regXp.test(inputField.value)) {
         //Removes -|' '|SE from entered text and replaces text in input field.
         inputField.value = regXp.exec(inputField.value)[0].replace(new RegExp('SE|-|\\s', 'g', ''), this);
@@ -81,7 +81,7 @@ function checkPostNumberConstraintAndAdapt(inputField) {
 function checkEmailConstraint(inputField) {
     //The longest tld are .museum and .travel , "infinitely" long tld guarantees futureproofing
     var regXp = new RegExp('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+\\b');
-    console.log("Email check is :"+regXp.test(inputField));
+    console.log("Email check is :" + regXp.test(inputField));
     if (regXp.test(inputField.value)) {
         removeWarningText(inputField);
     }
@@ -99,8 +99,8 @@ function addWarningText(element, text) {
         paragraph.setAttribute('class', 'warning');
         element.parentElement.appendChild(paragraph);
     }
-    removeClassFromElement(element,'valid');
-    addClassToElement(element,'invalid');
+    removeClassFromElement(element, 'valid');
+    addClassToElement(element, 'invalid');
 }
 
 /*
@@ -111,29 +111,31 @@ function removeWarningText(element) {
     if (element.parentElement.lastChild.tagName === 'P') {
         element.parentElement.removeChild(element.parentElement.lastChild);
     }
-    removeClassFromElement(element,'invalid');
-    addClassToElement(element,'valid');
+    removeClassFromElement(element, 'invalid');
+    addClassToElement(element, 'valid');
 }
-function addClassToElement(element,elementClass){
+
+function addClassToElement(element, elementClass) {
     //adding borders to regex
-    var elementClassRegexString='\\b'+elementClass+'\\b';
+    var elementClassRegexString = '\\b' + elementClass + '\\b';
     if (element.hasAttribute('class')) {
         var invalidRegex = new RegExp(elementClassRegexString);
         if (!invalidRegex.test(element.getAttribute('class'))) {
-            element.setAttribute('class', element.getAttribute('class')+" "+elementClass);
+            element.setAttribute('class', element.getAttribute('class') + " " + elementClass);
         }
     }
     else {
         element.setAttribute('class', elementClass);
     }
 }
-function removeClassFromElement(element,elementClass){
+
+function removeClassFromElement(element, elementClass) {
     //adding borders to regex
-    var elementClassRegexString='\\b'+elementClass+'\\b';
+    var elementClassRegexString = '\\b' + elementClass + '\\b';
     if (element.hasAttribute('class')) {
         var invalidRegex = new RegExp(elementClassRegexString);
         if (invalidRegex.test(element.getAttribute('class'))) {
-            element.setAttribute('class', element.getAttribute('class').replace(invalidRegex,''));
+            element.setAttribute('class', element.getAttribute('class').replace(invalidRegex, ''));
         }
     }
 }
