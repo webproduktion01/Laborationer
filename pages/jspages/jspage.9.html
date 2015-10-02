@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Laboration 4 - Javascript</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /* Uppgift 9 - Tabell-generering */
+
+        function generateTable(twoDimensionalTableArray) {
+
+            console.log(typeof twoDimensionalTableArray);
+            console.log(twoDimensionalTableArray.length);
+            console.log(twoDimensionalTableArray[0].length);
+
+            //Ugh, le manually generated html
+            //börjar med kroppen o le tablee
+            var toBeWritten = "";
+            toBeWritten += "<table border='1'> ";
+            //Brutit ut thead+th då jag slipper att en if() körs varje loop
+            toBeWritten += "<thead>\n";
+            toBeWritten += "<tr>\n";
+            for (var i = 0; i < twoDimensionalTableArray[0].length; i++) {
+                toBeWritten += "<th>\n";
+                toBeWritten += twoDimensionalTableArray[0][i];
+                toBeWritten += "</th>\n";
+            }
+            toBeWritten += "</tr>\n";
+            toBeWritten += "</thead>\n";
+            toBeWritten += "<tbody>\n";
+            //skippar som sagt första raden här
+            for (i = 1; i < twoDimensionalTableArray.length; i++) {
+                //varannan rad skulle ha annorlunda färg. table headern skulle räknas tydligen
+                if ((i+1) % 2 == 0) {
+                    toBeWritten += "<tr bgcolor='green' >\n";
+                }
+                else {
+                    toBeWritten += "<tr>\n";    
+                }
+                
+                for (var j = 0; j < twoDimensionalTableArray[i].length; j++) {
+                    toBeWritten += "<td>\n";
+                    toBeWritten += twoDimensionalTableArray[i][j];
+                    toBeWritten += "</td>\n";
+
+                }
+                toBeWritten += "</tr>\n";
+            }
+            toBeWritten += "</tbody>\n";
+            toBeWritten += " </table>\n";
+
+            document.open();
+            document.write(toBeWritten);
+            document.close();
+        }
+        /* Matrisdata */
+        var cell = [
+            [],
+            [],
+            [],
+            [],
+            []
+        ];
+        cell[0][0] = "Förnamn:";
+        cell[0][1] = "Efternamn:";
+        cell[0][2] = "Telefon:";
+        cell[1][0] = "Haris";
+        cell[1][1] = "Kljajic";
+        cell[1][2] = "7716";
+        cell[2][0] = "Mats";
+        cell[2][1] = "Loock";
+        cell[2][2] = "7714";
+        cell[3][0] = "a";
+        cell[3][1] = "a";
+        cell[3][2] = "a";
+        cell[4][0] = "b";
+        cell[4][1] = "b";
+        cell[4][2] = "b";
+        generateTable(cell);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+a{
+    clear:both;
+    display:block;
+    float:left;
+}
+input,label,#pricemodel{
+    float:left;
+    display:block;
+    width:250px;
+    padding:0;
+    margin:0;
+}
+fieldset{
+    margin-left:0;
+    padding-left:0;
+    border-style:none;
+    border-width:0px;
+}
+#contactForm{
+    margin:auto;
+    width:400px;
+    float:left;
+    padding:0;
+    border-style:none;
+    display:block;
+}
+.faded{
+    opacity:0.5;
+}
+#button{
+    background-color:orange;
+}
+.button{
+    width:10em;    
+    background-color:orange;
+    border-radius:5px;
+    color:white;
+    border-width:0;
+    padding:0.2em;
+    margin-top:0.2em;
+}
+
+div{
+    float:left;
+    display:block;
+    padding:0;
+    margin:0;
+}
+.warning{
+  margin:0;  
+  padding:0;
+  color:white;
+}
+form:valid{
+    background-color:green;
+}
+
+form:invalid{
+    background-color:red;
+}
+input:valid{
+    outline-color:green;
+    
+}
+input:invalid{
+    outline-color:red;
+    background-color:red;
+    
+}
+
+input:blur:invalid{
+    background-color:red;
+}
+input:focus:valid{
+    background-color:orange;
+}
+input:focusout{
+    background-color:yellow;
+}
+input:focusin{
+    background-color:yellow;
+}
+input:onfocusout{
+    
+}
+input:onfocusin{
+    
+}
+
+
+
+:-moz-placeholder {
+	color: blue;
+}
+
+::-webkit-input-placeholder {
+	color: blue;
+}
+#confirm{
+    display:block;
+    position:absolute;
+    margin:0;
+    width:400px;
+    z-index:100;
+    top:33%;
+    left:33%;
+    border-style:solid;
+    border-color:black;
+    border-width:2px;
+    background-color:white;
+}
+#confirm div{
+    float:left;
+    clear:both;
+    margin:0;
+}
+#confirm div p{
+    margin:0;
+}
+#confirm div h4{
+    margin:0;
+}
+.invalid{
+    background-color:red;
+}
+.valid{
+    background-color:green;
+}
+

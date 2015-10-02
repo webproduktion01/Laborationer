@@ -222,6 +222,10 @@ nav nav dl dd:hover {}
 nav nav ul,
 nav nav dl {
     border-color: #DE8540;
+    color: #9D4F13;
+}
+nav nav dl dd{
+    color: #9D4F13;
 }
 
 

@@ -10,8 +10,12 @@ aside,
 section section,
 .blogg-entry,
 .signatur,
-#contactForm {
+#contactForm{
     border-radius: 1em;
+}
+nav nav dl dd:last-child a{
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
 }
 
 
@@ -167,13 +171,9 @@ ul li {
     background-position: 0% 0.1em;
 }
 
-dl {}
-
 dl dt {
     margin: 0.75em 0 0.25em 0;
 }
-
-dl dt dd {}
 
 
 /* Detailed navigation menu behaviour and layout*/
@@ -238,7 +238,7 @@ nav nav dl dd {
 nav nav ul li a,
 nav nav dl dd a {
     float: left;
-    width: 100%;
+    width:100%;
 }
 
 nav nav ul li a:link,
@@ -415,12 +415,61 @@ table {
     border-style: solid;
     text-align: center;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
+    /* Test */
+    display:block;
+}
+table tr{
+    border-style:solid;
+    border-color:white;
+    border-bottom:0.0625em;
+}
+table tr td{
+    border-style:solid;
+    border-color:white;
+
 }
 
-table thead tr {}
+table thead tr {
+    border-style:solid;
+    border-color:white;
+    border-bottom:0.0625em;
 
-table tbody tr td {}
+}
+
+table tbody tr td {
+
+    
+}
+/* Cells needing expansion*/
+table tbody tr:nth-child(10n+1) td:nth-child(1){
+    background-color:green;
+    overflow-y:visible;
+
+    
+}
+table tbody tr:nth-child(1n+10) td:nth-child(1){
+    overflow-y:visible;
+    background-color:yellow;
+}
+/* Selection of td's that needs not be displayed or height 0% */
+table tbody tr:not(:nth-child(10n+1)) td:nth-child(1){
+    background-color:orange;
+}
+
+/*  displaced cells due to invisible first column cells(if display:none is used 
+    which doesn't work as planned apparently
+*/
+table tbody tr:not(:nth-child(10n+1)) td:nth-child(1n+2){
+    background-color:gray;
+}
+/* first row of non-expandeables */
+table tbody tr:not(:nth-child(10n+1)) td:nth-child(2){
+    background-color:purple;
+}
+
 
 table tbody tr:nth-of-type(10n+1) {
     border-top: 0.0625em;
@@ -431,6 +480,14 @@ table tfoot {
     border-bottom: 0.0625em;
     border-top: 0.0625em;
     border-style: solid;
+}
+table tfoot tr{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+table tfoot tr td{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
 }
 
 
@@ -479,4 +536,16 @@ table tfoot {
 /* favicon settings */
 #favicon{
    
+}
+/* Local nav needs layout adapted to global nav with sprites*/
+nav nav dl dd a{
+    padding-left: 12%;
+    width: 88%;
+    max-width:88%;
+    min-width:88%;
+}
+/* Added looks for solo-menu to look the same as others as well*/
+#soloMenu ul li:last-child a{
+    border-bottom-left-radius:1em;
+    border-bottom-right-radius:1em;
 }
