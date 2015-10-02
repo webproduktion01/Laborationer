@@ -51,20 +51,21 @@ div{
   padding:0;
   color:white;
 }
-input:valid{
-    outline-color:green;
-    
-}
-input:invalid{
-    outline-color:red;
-    
-}
 form:valid{
     background-color:green;
 }
 
 form:invalid{
     background-color:red;
+}
+input:valid{
+    outline-color:green;
+    
+}
+input:invalid{
+    outline-color:red;
+    background-color:red;
+    
 }
 
 input:blur:invalid{
@@ -80,10 +81,10 @@ input:focusin{
     background-color:yellow;
 }
 input:onfocusout{
-    background-color:orange;
+    
 }
 input:onfocusin{
-    background-color:orange;
+    
 }
 
 
@@ -118,5 +119,11 @@ input:onfocusin{
 }
 #confirm div h4{
     margin:0;
+}
+.invalid{
+    background-color:red;
+}
+.valid{
+    background-color:green;
 }
 

@@ -4,6 +4,24 @@ window.onload = function() {
 };
 
 /*
+    Adding event handlers
+*/
+var eventHandlers = function prepareEventHandlers() {
+    var inputTexts = document.body.getElementsByTagName('INPUT');
+    for (var i = 0; i < inputTexts.length; i++) {
+        //Adds out of focus out listener to input texts ,havent decided or checked which to use yet
+        //console.log(document.getElementById(inputTexts.item(i).id));
+        document.getElementById(inputTexts.item(i).id).addEventListener('blur', checkValidInput, true);
+        //document.getElementById(inputTexts.item(i).id).addEventListener('focusout', checkValidInput, true);
+        //Adds in focus in listener to input texts, havent decided or checked which to use yet
+        document.getElementById(inputTexts.item(i).id).addEventListener('focus', checkValidInput, true);
+        //document.getElementById(inputTexts.item(i).id).addEventListener('focusin', checkValidInput, true);
+        //console.log(document.getElementById(inputTexts.item(i).id).id+" has listeners attached");
+        //console.log("DOM node: "+inputTexts.item(i));
+    }
+};
+
+/*
     Checks text in input field when it goes out of focus
 */
 function checkValidInput() {
@@ -31,6 +49,7 @@ function checkValidInput() {
     when user does not enter correct input in it.
 */
 function checkNameConstraint(inputField) {
+    console.log("Name check is :"+(inputField.value === null || inputField.value === ""));
     if (inputField.value === null || inputField.value === "") {
         addWarningText(inputField, "Detta fält får ej lämnas blankt");
     }
@@ -46,7 +65,7 @@ function checkNameConstraint(inputField) {
 function checkPostNumberConstraintAndAdapt(inputField) {
     //RegXp for given pattern
     var regXp = new RegExp('\\b(SE(\\s)([0-9]{3}(-|\\s)[0-9]{2})|SE([0-9]{3}(-|\\s)[0-9]{2})|([0-9]{3}(-|\\s)[0-9]{2})|[0-9]{5})\\b');
-
+    console.log("Postnr check is :"+regXp.test(inputField));
     if (regXp.test(inputField.value)) {
         //Removes -|' '|SE from entered text and replaces text in input field.
         inputField.value = regXp.exec(inputField.value)[0].replace(new RegExp('SE|-|\\s', 'g', ''), this);
@@ -62,7 +81,7 @@ function checkPostNumberConstraintAndAdapt(inputField) {
 function checkEmailConstraint(inputField) {
     //The longest tld are .museum and .travel , "infinitely" long tld guarantees futureproofing
     var regXp = new RegExp('\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+\\b');
-
+    console.log("Email check is :"+regXp.test(inputField));
     if (regXp.test(inputField.value)) {
         removeWarningText(inputField);
     }
@@ -74,45 +93,53 @@ function checkEmailConstraint(inputField) {
     Adds warning text(paragraph) next to input text element
 */
 function addWarningText(element, text) {
-    if (element.parentElement.lastChild.tagName != 'P'){
-    var paragraph = document.createElement('P');
-    paragraph.appendChild(document.createTextNode(text));
-    paragraph.setAttribute('class', 'warning');
-    element.parentElement.appendChild(paragraph);
-        if (element.hasAttribute('valid')) {
-            element.removeAttribute('valid', '');
-            element.setAttribute('invalid', '');
-        }
+    if (element.parentElement.lastChild.tagName != 'P') {
+        var paragraph = document.createElement('P');
+        paragraph.appendChild(document.createTextNode(text));
+        paragraph.setAttribute('class', 'warning');
+        element.parentElement.appendChild(paragraph);
     }
+    removeClassFromElement(element,'valid');
+    addClassToElement(element,'invalid');
 }
 
 /*
     removes warning text(paragraph) next to input text element
+    
 */
 function removeWarningText(element) {
-    element.removeAttribute('invalid', '');
-    element.setAttribute('valid', '');
     if (element.parentElement.lastChild.tagName === 'P') {
         element.parentElement.removeChild(element.parentElement.lastChild);
     }
-
+    removeClassFromElement(element,'invalid');
+    addClassToElement(element,'valid');
+}
+function addClassToElement(element,elementClass){
+    //adding borders to regex
+    var elementClassRegexString='\\b'+elementClass+'\\b';
+    if (element.hasAttribute('class')) {
+        var invalidRegex = new RegExp(elementClassRegexString);
+        if (!invalidRegex.test(element.getAttribute('class'))) {
+            element.setAttribute('class', element.getAttribute('class')+" "+elementClass);
+        }
+    }
+    else {
+        element.setAttribute('class', elementClass);
+    }
+}
+function removeClassFromElement(element,elementClass){
+    //adding borders to regex
+    var elementClassRegexString='\\b'+elementClass+'\\b';
+    if (element.hasAttribute('class')) {
+        var invalidRegex = new RegExp(elementClassRegexString);
+        if (invalidRegex.test(element.getAttribute('class'))) {
+            element.setAttribute('class', element.getAttribute('class').replace(invalidRegex,''));
+        }
+    }
 }
 
 
-var eventHandlers = function prepareEventHandlers() {
-    var inputTexts = document.body.getElementsByTagName('INPUT');
-    for (var i = 0; i < inputTexts.length; i++) {
-        //Adds out of focus out listener to input texts ,havent decided or checked which to use yet
-        //console.log(document.getElementById(inputTexts.item(i).id));
-        document.getElementById(inputTexts.item(i).id).addEventListener('blur', checkValidInput, true);
-        document.getElementById(inputTexts.item(i).id).addEventListener('focusout', checkValidInput, true);
-        //Adds in focus in listener to input texts, havent decided or checked which to use yet
-        document.getElementById(inputTexts.item(i).id).addEventListener('focus', checkValidInput, true);
-        document.getElementById(inputTexts.item(i).id).addEventListener('focusin', checkValidInput, true);
-        //console.log(document.getElementById(inputTexts.item(i).id).id+" has listeners attached");
-        //console.log("DOM node: "+inputTexts.item(i));
-    }
-};
+
 
 function displayVerify(form) {
     var leContainerForm = document.getElementById("contactForm");
@@ -123,13 +150,13 @@ function displayVerify(form) {
         var div = document.createElement('DIV');
         div.setAttribute('id', 'confirm');
         //Getting references to text and data needed to populate it
-        var inputs=leContainerForm.getElementsByTagName('INPUT');
-        var labels=leContainerForm.getElementsByTagName('LABEL');
+        var inputs = leContainerForm.getElementsByTagName('INPUT');
+        var labels = leContainerForm.getElementsByTagName('LABEL');
         //Creating contents of the popup div
-        for(var i=0;i<labels.length;i++){
+        for (var i = 0; i < labels.length; i++) {
             console.log(labels.length);
-            var cDiv=document.createElement('DIV');
-            var desc=document.createElement('H4');
+            var cDiv = document.createElement('DIV');
+            var desc = document.createElement('H4');
             desc.appendChild(document.createTextNode(labels[i].textContent));
             cDiv.appendChild(desc);
             var para = document.createElement('P');
@@ -141,27 +168,27 @@ function displayVerify(form) {
         //Adding confirm button
         var buttonName = div.lastChild.removeChild(div.lastChild.lastChild).textContent;
         var okButton = document.createElement('INPUT');
-        okButton.setAttribute('type','submit');
-        okButton.setAttribute('name','confirm_button');
-        okButton.setAttribute('class','button');
-        okButton.setAttribute('id','okbutton');
+        okButton.setAttribute('type', 'submit');
+        okButton.setAttribute('name', 'confirm_button');
+        okButton.setAttribute('class', 'button');
+        okButton.setAttribute('id', 'okbutton');
         //Post on submit, not do this function agaaain
-        okButton.setAttribute('onsubmit','formulairePost.html');
+        okButton.setAttribute('onsubmit', 'formulairePost.html');
         //Muyo importante to associate input button with the form
-        okButton.setAttribute('form','contact_form');
+        okButton.setAttribute('form', 'contact_form');
         okButton.value = buttonName;
         //Adding cancel button
         var cancelButton = document.createElement('INPUT');
-        cancelButton.setAttribute('type','button');
-        cancelButton.setAttribute('name','cancel_button');
-        cancelButton.setAttribute('id','cancelButton');
-        cancelButton.setAttribute('class','button');
+        cancelButton.setAttribute('type', 'button');
+        cancelButton.setAttribute('name', 'cancel_button');
+        cancelButton.setAttribute('id', 'cancelButton');
+        cancelButton.setAttribute('class', 'button');
         //cancelButton.setAttribute('form','contact_form');
-        cancelButton.setAttribute('onclick','return removePopup(this)');
-        cancelButton.value='Avbryt köp';
-        
-        var soloDiv=document.createElement('DIV');
-        var select=leContainerForm.getElementsByTagName('SELECT')[0];
+        cancelButton.setAttribute('onclick', 'return removePopup(this)');
+        cancelButton.value = 'Avbryt köp';
+
+        var soloDiv = document.createElement('DIV');
+        var select = leContainerForm.getElementsByTagName('SELECT')[0];
         var soloP = document.createElement('P');
         soloP.appendChild(document.createTextNode(select.options[select.selectedIndex].text));
         soloDiv.appendChild(soloP);
@@ -174,28 +201,28 @@ function displayVerify(form) {
         var parentDiv = document.getElementById("containerDiv");
         parentDiv.appendChild(div);
         //Adds class faded to original containerform to fade it out
-        leContainerForm.setAttribute('class',leContainerForm.getAttribute('class')+" "+"faded");
+        leContainerForm.setAttribute('class', leContainerForm.getAttribute('class') + " " + "faded");
         document.getElementById('contact_form').removeAttribute("onSubmit");
         return false;
     }
     else {
         console.log("Miss");
         var classes = leContainerForm.getAttribute('class');
-        classes.replace('faded','');
+        classes.replace('faded', '');
         return false;
     }
 }
 
-function removePopup(element){
+function removePopup(element) {
     console.log("True hit")
-    //Removes popup
+        //Removes popup
     var div = document.getElementById('confirm');
-    var containerDiv =document.getElementById("containerDiv")
+    var containerDiv = document.getElementById("containerDiv")
     containerDiv.removeChild(div);
     //Fades in original div with contents(form etc)
     var originalDiv = document.getElementById("contactForm");
     var classes = originalDiv.getAttribute('class');
-    originalDiv.setAttribute('class',classes.replace('faded',''));
-    document.getElementById('contact_form').setAttribute('onsubmit','return displayVerify(this)');
+    originalDiv.setAttribute('class', classes.replace('faded', ''));
+    document.getElementById('contact_form').setAttribute('onsubmit', 'return displayVerify(this)');
     return false;
 }
