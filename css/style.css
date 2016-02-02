@@ -179,10 +179,6 @@ dl dt {
 /* Detailed navigation menu behaviour and layout*/
 
 
-/* Nav is in pixels since inherited nav's use parents nav(not grandparentparentetc) no matter what you set them as apparently
-    Atleast in firefox 40.0.3
-*/
-
 nav {
     float: left;
     max-width: inherit;
@@ -197,6 +193,9 @@ nav nav {
     border-bottom: 0.0625em;
     border-style: solid;
     margin-right: -0.0625em;
+}
+nav nav h4{
+    height:100%;
 }
 
 nav nav dl dt {
@@ -251,6 +250,7 @@ nav nav dl dd a:active {
     height: inherit;
     width: inherit;
 }
+
 
 
 /* Content containers settings,layout and behaviour*/
